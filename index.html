@@ -178,6 +178,17 @@
 .collage-aligned .tile.half{margin:0;width:100%}
 .ai-diagrams img{width:100%;height:auto;display:block;vertical-align:top}
 .slide:has(.district-layout){padding:7vh 6vw 8vh}.slide:has(.district-layout) .slide-content{width:100%}
+
+/* district whitespace overrides */
+.slide.district{padding:6.5vh 5.5vw 7.5vh!important;background:var(--paper)}
+.slide.district .district-layout{display:grid!important;grid-template-columns:minmax(0,1.45fr) minmax(240px,.78fr)!important;gap:clamp(32px,5vw,72px)!important;align-items:center!important;width:min(90%,1320px)!important;height:auto!important;min-height:calc(100svh - 18vh)!important;margin:0 auto!important;padding:0!important}
+.slide.district .district-layout > *:first-child,
+.slide.district .map-pane{min-width:0;max-height:min(68vh,640px);display:flex;align-items:center;justify-content:flex-start;overflow:hidden;border-radius:2px}
+.slide.district .district-layout img,
+.slide.district .map-pane img{width:100%;height:auto;max-height:min(68vh,640px);object-fit:contain!important;object-position:left center;display:block}
+.slide.district .side-panel,.slide.district .district-side{padding:0 1vw 0 0;display:flex;align-items:center}
+.slide.district .district-eyebrow{position:static;color:var(--muted);text-shadow:none;margin:0 0 1.5vh;letter-spacing:.18em}
+
 </style>
 </head>
 <body>
