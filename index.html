@@ -340,38 +340,171 @@
 .cg-card h3{margin-top:4px}
 
 
-/* Frontier Tower case — after 山心 */
-.lz-frontier{padding:5.2vh 5.2vw 4.6vh!important}
-.lz-frontier .slide-content{height:100%;display:flex;flex-direction:column;max-width:1580px;gap:clamp(6px,1vh,12px);min-height:0}
-.lz-frontier .smallcap{margin-bottom:.2vh}
-.lz-frontier .ft-title{font-size:clamp(20px,2.05vw,34px);margin:0;line-height:1.28;letter-spacing:-.04em;font-weight:580;max-width:1180px}
-.ft-layout{flex:1;min-height:0;display:grid;grid-template-columns:minmax(260px,.88fr) minmax(360px,1.2fr);gap:clamp(14px,2.2vw,32px);align-items:stretch}
-.ft-hero{margin:0;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#efebe2;position:relative;min-height:0;display:flex;flex-direction:column}
-.ft-hero img{width:100%;flex:1;object-fit:cover;object-position:center 35%;display:block;min-height:0}
-.ft-hero figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;font-size:clamp(10px,.75vw,13px);color:#f7f2e7;background:linear-gradient(0deg,rgba(21,22,20,.72),transparent);letter-spacing:.04em}
-.ft-right{display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px);min-height:0}
-.ft-story{font-size:clamp(12px,.98vw,16px);line-height:1.65;color:#3f433e;max-width:720px}
-.ft-story strong{color:var(--ink);font-weight:620}
-.ft-meta{display:flex;flex-wrap:wrap;gap:7px}
-.ft-meta span{font-size:clamp(10px,.7vw,12px);letter-spacing:.06em;font-weight:620;color:var(--ink);background:rgba(212,90,48,.1);border:1px solid rgba(212,90,48,.22);padding:5px 10px;border-radius:100px}
-.ft-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:stretch;margin-top:2px}
-.ft-card{border-top:2px solid var(--line);padding:8px 2px 2px;background:transparent;display:flex;flex-direction:column;min-width:0}
-.ft-card:nth-child(1){border-color:var(--orange)}
-.ft-card .n{font-size:10px;letter-spacing:.14em;color:var(--orange);font-weight:700}
-.ft-card h3{font-size:clamp(12px,.95vw,15px);font-weight:620;letter-spacing:-.03em;margin:6px 0 4px;line-height:1.3}
-.ft-card p{font-size:clamp(10px,.78vw,12px);color:#5b5c55;line-height:1.5;margin:0 0 6px}
-.ft-card-img{width:100%;aspect-ratio:4/3;max-height:min(14vh,120px);overflow:hidden;border-radius:3px;margin-top:auto;background:#e8e4db}
-.ft-card-img img{width:100%;height:100%;object-fit:cover;display:block;object-position:center}
-.ft-callout{margin-top:auto;padding:12px 14px;border-left:4px solid var(--orange);background:rgba(212,90,48,.08);border-radius:0 4px 4px 0}
-.ft-callout .k{font-size:clamp(10px,.72vw,12px);letter-spacing:.14em;font-weight:700;color:var(--orange);margin-bottom:5px}
-.ft-callout p{font-size:clamp(12px,.92vw,15px);line-height:1.55;color:var(--ink);margin:0;font-weight:540}
-.ft-callout strong{color:var(--orange);font-weight:650}
-@media(max-width:1100px){
-  .ft-cards{grid-template-columns:repeat(2,1fr)}
+/* Frontier Tower case — restore original case composition (not Corgi layout) */
+.lz-frontier{
+  padding: calc(52px + 0.8vh) 1.4vw 1.8vh !important;
+  background: #f9f7f2 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  justify-content:stretch !important;
 }
-@media(max-width:960px){
-  .ft-layout{grid-template-columns:1fr}
-  .ft-hero{min-height:26vh}
+.lz-frontier .ft-stage{
+  flex:1 1 auto;
+  height:100%;
+  width:100%;
+  max-width:1720px;
+  margin:0 auto;
+  display:grid;
+  grid-template-rows:1fr;
+  min-height:0;
+  align-self:stretch;
+  font-size:clamp(11px, min(1.85vh, 1.25vw), 16px);
+  color:#161616;
+  --ft-cream:#f9f7f2;
+  --ft-cream-deep:#f0ebe1;
+  --ft-ink:#161616;
+  --ft-muted:#6a655c;
+  --ft-line:#d9d2c4;
+  --ft-orange:#e85d04;
+  --ft-orange-wash:rgba(232,93,4,.08);
+  --ft-serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC","STSong","SimSun",Georgia,serif;
+}
+.lz-frontier .ft-body{
+  display:grid;
+  grid-template-columns:1.05fr 1.35fr;
+  gap:.9em;
+  min-height:0;
+  height:100%;
+}
+.lz-frontier .ft-visual{
+  position:relative;
+  border-radius:.35em;
+  overflow:hidden;
+  background:#2a241c;
+  min-height:0;
+  margin:0;
+}
+.lz-frontier .ft-visual .ft-hero-img{
+  width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block;
+}
+.lz-frontier .ft-floor-tag{
+  position:absolute;z-index:3;display:flex;align-items:center;gap:.45em;max-width:62%;
+}
+.lz-frontier .ft-floor-tag .badge{
+  flex-shrink:0;background:var(--ft-cream);color:var(--ft-ink);
+  border:1.5px solid rgba(22,22,22,.12);border-radius:.28em;
+  padding:.45em .7em .4em;box-shadow:0 8px 22px rgba(0,0,0,.28);line-height:1.25;
+}
+.lz-frontier .ft-floor-tag .badge .level{
+  font-size:.62em;letter-spacing:.14em;text-transform:uppercase;color:var(--ft-orange);font-weight:700;margin-bottom:.12em;
+}
+.lz-frontier .ft-floor-tag .badge .zh{
+  font-family:var(--ft-serif);font-size:1em;font-weight:700;letter-spacing:.06em;white-space:nowrap;
+}
+.lz-frontier .ft-floor-tag .badge .en{
+  display:block;font-size:.56em;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ft-muted);margin-top:.1em;
+}
+.lz-frontier .ft-floor-tag .leader{
+  flex:1;height:2px;min-width:1.2em;
+  background:linear-gradient(90deg,rgba(249,247,242,.95),rgba(249,247,242,.15));
+  border-radius:1px;position:relative;
+}
+.lz-frontier .ft-floor-tag .leader::after{
+  content:"";position:absolute;right:-.2em;top:50%;width:.45em;height:.45em;border-radius:50%;
+  background:var(--ft-cream);border:2px solid var(--ft-orange);transform:translateY(-50%);
+  box-shadow:0 0 0 3px rgba(232,93,4,.25);
+}
+.lz-frontier .ft-floor-tag.upper{top:14%;left:3.5%}
+.lz-frontier .ft-floor-tag.mid{top:42%;left:3.5%}
+.lz-frontier .ft-floor-tag.lower{top:68%;left:3.5%}
+.lz-frontier .ft-zone{
+  position:absolute;left:30%;right:22%;z-index:2;pointer-events:none;
+  border-left:2px solid rgba(249,247,242,.55);border-right:2px solid rgba(249,247,242,.25);
+  background:linear-gradient(90deg,rgba(249,247,242,.12),transparent 40%,transparent 60%,rgba(249,247,242,.06));
+}
+.lz-frontier .ft-zone.upper{top:8%;height:20%;border-top:2px dashed rgba(249,247,242,.45);border-bottom:2px dashed rgba(249,247,242,.35)}
+.lz-frontier .ft-zone.mid{
+  top:34%;height:28%;border-top:2px dashed rgba(249,247,242,.4);border-bottom:2px dashed rgba(249,247,242,.35);
+  background:linear-gradient(90deg,rgba(232,93,4,.12),transparent 45%,transparent 55%,rgba(232,93,4,.06));
+}
+.lz-frontier .ft-zone.lower{top:66%;height:18%;border-top:2px dashed rgba(249,247,242,.4);border-bottom:2px dashed rgba(249,247,242,.35)}
+.lz-frontier .ft-caption{
+  position:absolute;left:0;right:0;bottom:0;z-index:4;
+  padding:1.5em .85em .65em;background:linear-gradient(transparent,rgba(12,10,8,.82));
+  color:#fff;display:flex;align-items:flex-end;gap:.6em;
+}
+.lz-frontier .ft-caption .loc{font-size:.76em;letter-spacing:.04em;line-height:1.35}
+.lz-frontier .ft-caption .loc em{
+  display:block;font-style:normal;font-size:.85em;opacity:.75;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.15em;
+}
+.lz-frontier .ft-thumb{
+  position:absolute;top:.55em;right:.55em;z-index:5;width:28%;
+  border-radius:.25em;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.4);
+  border:2px solid rgba(255,255,255,.9);background:#111;
+}
+.lz-frontier .ft-thumb img{
+  width:100%;height:auto;display:block;aspect-ratio:3/4;object-fit:cover;object-position:center 40%;
+}
+.lz-frontier .ft-thumb .tip{
+  position:absolute;left:0;right:0;bottom:0;padding:.35em .4em;
+  background:rgba(12,10,8,.72);color:#fff;font-size:.5em;letter-spacing:.08em;text-align:center;text-transform:uppercase;
+}
+.lz-frontier .ft-content{
+  display:grid;grid-template-rows:auto 1fr;gap:.65em;min-height:0;
+}
+.lz-frontier .ft-quote{
+  position:relative;padding:.7em .9em .7em 1em;
+  background:var(--ft-orange-wash);border-left:3px solid var(--ft-orange);
+  border-radius:0 .25em .25em 0;
+}
+.lz-frontier .ft-quote .mark{
+  font-family:var(--ft-serif);font-size:1.6em;color:var(--ft-orange);line-height:1;
+  position:absolute;top:.25em;left:.35em;opacity:.55;
+}
+.lz-frontier .ft-quote p{
+  font-family:var(--ft-serif);font-size:.96em;line-height:1.55;letter-spacing:.03em;color:var(--ft-ink);padding-left:.4em;margin:0;
+}
+.lz-frontier .ft-quote p .en-line{
+  display:block;margin-top:.25em;font-family:inherit;font-size:.88em;font-weight:600;color:var(--ft-orange);letter-spacing:.02em;
+}
+.lz-frontier .ft-quote .by{
+  margin-top:.35em;padding-left:.4em;font-size:.68em;letter-spacing:.12em;text-transform:uppercase;color:var(--ft-muted);
+}
+.lz-frontier .ft-cards{
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.5em;min-height:0;
+}
+.lz-frontier .ft-card{
+  background:#fff;border:1px solid var(--ft-line);border-radius:.3em;
+  padding:.5em .65em;display:flex;flex-direction:column;gap:.18em;min-height:0;overflow:hidden;
+}
+.lz-frontier .ft-card .card-img{
+  margin-top:auto;width:100%;height:3.6em;border-radius:.22em;overflow:hidden;
+  background:var(--ft-cream-deep);border:1px solid var(--ft-line);flex-shrink:0;
+}
+.lz-frontier .ft-card .card-img img{
+  width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;
+}
+.lz-frontier .ft-card .num{
+  font-size:.62em;letter-spacing:.16em;color:var(--ft-orange);font-weight:700;
+}
+.lz-frontier .ft-card h3{
+  font-family:var(--ft-serif);font-size:1em;font-weight:700;letter-spacing:.04em;line-height:1.25;margin:0;
+}
+.lz-frontier .ft-card h3 .en{
+  display:block;font-family:inherit;font-size:.62em;font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ft-muted);margin-top:.12em;
+}
+.lz-frontier .ft-card p{
+  font-size:.72em;line-height:1.38;color:#3a3530;letter-spacing:.02em;margin:.05em 0 0;flex:1;min-height:0;overflow:hidden;
+}
+.lz-frontier .ft-card.highlight{
+  background:linear-gradient(160deg,#fff 60%,#fff4eb);border-color:#efc9a8;
+}
+@media (max-width:960px){
+  .lz-frontier .ft-body{grid-template-columns:1fr;grid-template-rows:minmax(32vh,42vh) 1fr}
+  .lz-frontier .ft-cards{grid-template-rows:auto}
+}
   .ft-cards{grid-template-columns:1fr 1fr}
 }
 
@@ -1156,55 +1289,83 @@
   </div>
 </section>
 
-<!-- 12b 山心 · Frontier Tower 案例 -->
+<!-- 12b 山心 · Frontier Tower 案例 — original case composition -->
 <section class="slide light lz-frontier" data-note="Frontier Tower：办公去化背景下，用强运营把空置写字楼做成会员制深科技垂直村落。对尖岗山启示：主题楼层 + 弹性工位 + 1F 磁体 + Demo Day；卖运营范式，不必照搬品牌与共居许可。">
-  <div class="slide-content">
-    <p class="smallcap">山心 · 尖岗山　案例 / Frontier Tower</p>
-    <h2 class="large-title mid-title ft-title"><span class="accent">强运营</span>型科创空间 · Frontier Tower</h2>
-    <div class="ft-layout">
-      <figure class="ft-hero">
-        <img src="assets/frontier/exterior.jpg?v=20" alt="Frontier Tower 外立面 · Mid-Market SF">
-        <figcaption>SF · 995 Market St · Mid-Market · 16 Floors</figcaption>
+  <div class="ft-stage">
+    <div class="ft-body">
+      <figure class="ft-visual">
+        <img class="ft-hero-img" src="assets/frontier/exterior.jpg?v=23" alt="Frontier Tower 外景：Mid-Market 深科技垂直村落塔楼仰视">
+        <div class="ft-zone upper" aria-hidden="true"></div>
+        <div class="ft-zone mid" aria-hidden="true"></div>
+        <div class="ft-zone lower" aria-hidden="true"></div>
+        <div class="ft-floor-tag upper">
+          <div class="badge">
+            <div class="level">Upper · F14–16</div>
+            <div class="zh">会客厅 · 共工</div>
+            <span class="en">Lounge · Cowork · Flourish</span>
+          </div>
+          <span class="leader" aria-hidden="true"></span>
+        </div>
+        <div class="ft-floor-tag mid">
+          <div class="badge">
+            <div class="level">Mid · Floor Tribes</div>
+            <div class="zh">主题楼层部落</div>
+            <span class="en">AI · Robotics · Biotech · Eth</span>
+          </div>
+          <span class="leader" aria-hidden="true"></span>
+        </div>
+        <div class="ft-floor-tag lower">
+          <div class="badge">
+            <div class="level">Base · Commons</div>
+            <div class="zh">活动舱 · 入口</div>
+            <span class="en">Spaceship · Events · Enter</span>
+          </div>
+          <span class="leader" aria-hidden="true"></span>
+        </div>
+        <div class="ft-thumb" title="白板楼层图 · Floor Stack">
+          <img src="assets/frontier/whiteboard.jpg?v=23" alt="Frontier Tower 白板楼层图：社区成员讲解垂直村落主题楼层">
+          <div class="tip">Floor Map</div>
+        </div>
+        <figcaption class="ft-caption">
+          <div class="loc">
+            <em>Exterior · 995 Market Street · Mid-Market</em>
+            空置写字楼 → 会员制深科技垂直村落：楼层即产品、社区即运营
+          </div>
+        </figcaption>
       </figure>
-      <div class="ft-right">
-        <div class="ft-meta">
-          <span>16 Floors</span>
-          <span>Mid-Market SF</span>
-          <span>Membership</span>
-          <span>~$11M · 2025</span>
-        </div>
-        <p class="ft-story">
-          办公去化 → <strong>强运营增强弹性与产品力</strong>：把空置写字楼做成<strong>会员制深科技垂直村落</strong>——楼层即产品、社区即运营。
-        </p>
+      <div class="ft-content">
+        <blockquote class="ft-quote">
+          <span class="mark" aria-hidden="true">“</span>
+          <p>关于办公去化，可以通过强运营的方式增强弹性和产品力：
+            <span class="en-line">Frontier Tower | 16 Floors. SF's Deep-Tech Vertical Village.</span>
+          </p>
+          <div class="by">Kit · TEKUMA Urban Designer · Slide Hook</div>
+        </blockquote>
         <div class="ft-cards">
-          <div class="ft-card">
-            <div class="n">01</div>
-            <h3>空置 CRE → 会员产品</h3>
-            <p>不坐等大租户；Citizenship + 私办 + 活动舱的弹性产品。</p>
-            <div class="ft-card-img"><img src="assets/frontier/card-01.jpg?v=20" alt="空置写字楼产品化"></div>
-          </div>
-          <div class="ft-card">
-            <div class="n">02</div>
-            <h3>楼层部落</h3>
-            <p>AI / 机器人 / 生科 / Eth 主题分层；偶遇密度高于租金表。</p>
-            <div class="ft-card-img"><img src="assets/frontier/card-02.jpg?v=20" alt="主题楼层部落"></div>
-          </div>
-          <div class="ft-card">
-            <div class="n">03</div>
-            <h3>会员 · 活动 · 楼层主理</h3>
-            <p>Floor leads + 高频活动；装修可糙、运营要密。</p>
-            <div class="ft-card-img"><img src="assets/frontier/card-03.jpg?v=20" alt="会员活动运营"></div>
-          </div>
-          <div class="ft-card">
-            <div class="n">04</div>
-            <h3>对尖岗山启示</h3>
-            <p>主题楼层 + 弹性工位 + 1F 磁体 + Demo Day。</p>
-            <div class="ft-card-img"><img src="assets/frontier/card-04.jpg?v=20" alt="尖岗山映射"></div>
-          </div>
-        </div>
-        <div class="ft-callout">
-          <div class="k">关键提醒</div>
-          <p>卖的是<strong>运营范式</strong>，不必照搬品牌与共居许可。</p>
+          <section class="ft-card">
+            <div class="num">01 · 办公去化</div>
+            <h3>空置 CRE → 会员产品<span class="en">Vacancy → Product</span></h3>
+            <p>叙事锚定 CRE 20–30% 空置。不坐等大租户，把楼卖成 Citizenship（约 $150–190/月）+ 私办 + 活动舱的弹性产品。</p>
+            <div class="card-img"><img src="assets/frontier/card-01.jpg?v=23" alt="Frontier Tower 社区合影 · 会员社群"></div>
+          </section>
+          <section class="ft-card">
+            <div class="num">02 · 垂直村落</div>
+            <h3>楼层部落 · 偶遇密度<span class="en">Floor Tribes</span></h3>
+            <p>AI / 机器人 / 生科 / Eth / 体适能 / 艺术分层运营；Spaceship 办黑客松与 Town Hall。主题楼层制造 serendipity，而非纯租金表。</p>
+            <div class="card-img"><img src="assets/frontier/card-02.jpg?v=23" alt="Frontier Tower 楼层活动 · 讲座与部落"></div>
+          </section>
+          <section class="ft-card">
+            <div class="num">03 · 强运营</div>
+            <h3>会员 · 活动 · 楼层主理<span class="en">Ops &gt; Fit-out</span></h3>
+            <p>Floor leads + 高频活动 + 公民自治叙事；装修可糙、运营要密。~$11M 拿下前 WeWork / Mid-Market 空楼，用社区速度激活空间。</p>
+            <div class="card-img"><img src="assets/frontier/card-03.jpg?v=23" alt="Frontier Tower 面板讨论 · 强运营活动"></div>
+          </section>
+          <section class="ft-card highlight">
+            <div class="num">04 · 对尖岗山启示</div>
+            <h3>强运营科创产业社区<span class="en">Jiangangshan Parallel</span></h3>
+            <p>映射：主题楼层（终端/机器人/硬件）+ 会员/弹性工位 + 1F 磁体 + 共享工具与 Demo Day。卖运营范式，不必照搬品牌与共居许可。</p>
+            <div class="card-img"><img src="assets/frontier/card-04.jpg?v=23" alt="Frontier Tower 工作坊共创 · 对尖岗山启示"></div>
+          </section>
         </div>
       </div>
     </div>
