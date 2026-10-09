@@ -245,6 +245,22 @@
   .lz-board .lz-board-frame img{max-height:none}
 }
 
+
+.lz-bleed{padding:0!important;align-items:stretch;background:#f4f1ea}
+.lz-bleed-bg{position:absolute;inset:0;background-size:cover;background-position:58% 42%;background-repeat:no-repeat;z-index:0}
+.lz-bleed-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(90deg,rgba(246,243,237,.92) 0%,rgba(246,243,237,.78) 34%,rgba(246,243,237,.28) 58%,rgba(246,243,237,.08) 78%,rgba(246,243,237,.12) 100%),
+  linear-gradient(180deg,rgba(246,243,237,.55) 0%,rgba(246,243,237,0) 22%,rgba(246,243,237,0) 72%,rgba(246,243,237,.35) 100%)}
+.lz-bleed-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:8.2vh 7.4vw 10vh;max-width:1510px;margin:0 auto;width:100%}
+.lz-bleed-title{max-width:520px;text-shadow:0 1px 0 rgba(246,243,237,.4)}
+.lz-bleed-copy{max-width:480px;color:#2f332e;font-size:clamp(15px,1.15vw,20px);line-height:1.7;background:rgba(246,243,237,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:14px 16px;border-radius:4px}
+.lz-bleed-tags{margin-top:22px;display:inline-block;max-width:min(560px,90%);font-size:clamp(12px,.9vw,15px);font-weight:650;letter-spacing:.04em;color:var(--ink);background:rgba(244,167,119,.35);border:1px solid rgba(212,90,48,.25);padding:12px 16px;border-radius:3px}
+@media (max-width:900px){
+  .lz-bleed-bg{background-position:70% 40%}
+  .lz-bleed-scrim{background:linear-gradient(180deg,rgba(246,243,237,.94) 0%,rgba(246,243,237,.75) 42%,rgba(246,243,237,.25) 100%)}
+  .lz-bleed-copy{max-width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -666,25 +682,18 @@
 </section>
 
 <!-- 11c 灵芝 · 微更新策略 -->
-<section class="slide light" data-note="通过对低成本空间的微更新，形成适合年轻群体生活生产方式的创新空间，成为超级个体来深创业的第一落脚点。">
-  <div class="slide-content">
+<section class="slide light lz-bleed" data-note="通过对低成本空间的微更新，形成适合年轻群体生活生产方式的创新空间，成为超级个体来深创业的第一落脚点。">
+  <div class="lz-bleed-bg" style="background-image:url('assets/lingzhi/lz-s3-axon-full.jpg?v=1')"></div>
+  <div class="lz-bleed-scrim"></div>
+  <div class="slide-content lz-bleed-content">
     <p class="smallcap">城心 · 灵芝　L3 / 微更新策略</p>
-    <div class="lz-axon">
-      <div class="col-text">
-        <h2 class="large-title mid-title">微更新<br>形成<span class="accent">创新空间</span></h2>
-        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
-        <p class="sublead">
-          策略是通过对低成本空间的微更新，形成适合当代年轻群体生活生产方式的创新空间，成为超级个体 / 组织来深创业的<strong>第一落脚点</strong>。
-        </p>
-        <div class="callout orange" style="margin-top:26px">
-          <p>FOOD · CAFE · PARK · SHOP · BAR —— 街巷里的第三空间网络</p>
-        </div>
-      </div>
-      <div class="col-visual">
-        <figure class="hero-visual">
-          <img src="assets/lingzhi/lz-s3-axon.jpg" alt="灵芝片区低成本空间微更新轴测示意">
-        </figure>
-      </div>
+    <h2 class="large-title mid-title lz-bleed-title">微更新<br>形成<span class="accent">创新空间</span></h2>
+    <div class="thin-rule" style="width:42px;margin:18px 0 20px;background:var(--orange)"></div>
+    <p class="sublead lz-bleed-copy">
+      策略是通过对低成本空间的微更新，形成适合当代年轻群体生活生产方式的创新空间，成为超级个体 / 组织来深创业的<strong>第一落脚点</strong>。
+    </p>
+    <div class="lz-bleed-tags">
+      FOOD · CAFE · PARK · SHOP · BAR · THEATER —— 街巷里的第三空间网络
     </div>
   </div>
 </section>
