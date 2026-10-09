@@ -152,6 +152,11 @@
   .talent-grid .tile.tall{min-height:28vh}
 }
 
+
+.hero-visual{margin:0;border-radius:4px;overflow:hidden;border:1px solid var(--line);box-shadow:0 12px 40px rgba(35,32,25,.07);background:#efebe2;align-self:stretch;display:flex;flex-direction:column;min-height:0}
+.hero-visual img{width:100%;height:100%;object-fit:cover;display:block;min-height:280px;max-height:min(58vh,520px)}
+.hero-visual figcaption{padding:10px 14px;font-size:clamp(11px,.85vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);background:#fbfaf6}
+
 </style>
 </head>
 <body>
@@ -159,7 +164,7 @@
 <main class="slides" id="slides">
 
 <!-- 01 Inclusive Shenzhen -->
-<section class="slide light" data-note="深圳的创新根基是包容与年轻。用人口预测图说明这座城市把每一代年轻人留下来的重要性，以及创新主体多样化对生态可持续的意义。">
+<section class="slide light" data-note="深圳的创新根基是包容与年轻。右侧为宝安中心区鸟瞰，左侧说明深圳以年轻人为主体的包容气质，以及创新主体多样化对生态可持续的意义。">
   <div class="slide-content">
     <p class="smallcap">01 / 价值判断 · INCLUSIVE CITY</p>
     <div class="split-layout">
@@ -177,117 +182,11 @@
         </div>
       </div>
       <div class="col-visual">
-<div class="chart-card" aria-label="深圳人口发展趋势预测矢量图">
-          <h3>深圳人口发展趋势预测</h3>
-          <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img">
-            <title>深圳人口发展趋势预测（万人，1990–2100）</title>
-            <!-- plot area: x=56..620, y=28..230 -->
-            <defs>
-              <clipPath id="plotClip"><rect x="56" y="28" width="564" height="202"/></clipPath>
-            </defs>
-            <!-- grid -->
-            <g stroke="#c8c4bb" stroke-width="0.6" fill="none">
-              <!-- horizontal: 0,500,1000,1500,2000,2500 -->
-              <line x1="56" y1="230" x2="620" y2="230"/>
-              <line x1="56" y1="189.6" x2="620" y2="189.6"/>
-              <line x1="56" y1="149.2" x2="620" y2="149.2"/>
-              <line x1="56" y1="108.8" x2="620" y2="108.8"/>
-              <line x1="56" y1="68.4" x2="620" y2="68.4"/>
-              <line x1="56" y1="28" x2="620" y2="28"/>
-              <!-- vertical every 10 years: 1990..2100 = 12 intervals -->
-              <!-- year -> x: 56 + (y-1990)/110*564 -->
-            </g>
-            <g stroke="#d5d1c8" stroke-width="0.5">
-              <!-- 1990,2000,2010,2020,2030,2040,2050,2060,2070,2080,2090,2100 -->
-              <line x1="56" y1="28" x2="56" y2="230"/>
-              <line x1="107.27" y1="28" x2="107.27" y2="230"/>
-              <line x1="158.55" y1="28" x2="158.55" y2="230"/>
-              <line x1="209.82" y1="28" x2="209.82" y2="230"/>
-              <line x1="261.09" y1="28" x2="261.09" y2="230"/>
-              <line x1="312.36" y1="28" x2="312.36" y2="230"/>
-              <line x1="363.64" y1="28" x2="363.64" y2="230"/>
-              <line x1="414.91" y1="28" x2="414.91" y2="230"/>
-              <line x1="466.18" y1="28" x2="466.18" y2="230"/>
-              <line x1="517.45" y1="28" x2="517.45" y2="230"/>
-              <line x1="568.73" y1="28" x2="568.73" y2="230"/>
-              <line x1="620" y1="28" x2="620" y2="230"/>
-            </g>
-            <!-- axis labels -->
-            <g fill="#5a574f" font-family="Inter,sans-serif" font-size="9">
-              <text x="28" y="28" text-anchor="middle">2500</text>
-              <text x="28" y="72" text-anchor="middle">2000</text>
-              <text x="28" y="112" text-anchor="middle">1500</text>
-              <text x="28" y="153" text-anchor="middle">1000</text>
-              <text x="28" y="193" text-anchor="middle">500</text>
-              <text x="28" y="234" text-anchor="middle">0</text>
-              <text x="12" y="130" text-anchor="middle" transform="rotate(-90 12 130)" fill="#79766f">万人</text>
-              <text x="56" y="248" text-anchor="middle">1990</text>
-              <text x="107" y="248" text-anchor="middle">2000</text>
-              <text x="159" y="248" text-anchor="middle">2010</text>
-              <text x="210" y="248" text-anchor="middle">2020</text>
-              <text x="261" y="248" text-anchor="middle">2030</text>
-              <text x="312" y="248" text-anchor="middle">2040</text>
-              <text x="364" y="248" text-anchor="middle">2050</text>
-              <text x="415" y="248" text-anchor="middle">2060</text>
-              <text x="466" y="248" text-anchor="middle">2070</text>
-              <text x="517" y="248" text-anchor="middle">2080</text>
-              <text x="569" y="248" text-anchor="middle">2090</text>
-              <text x="620" y="248" text-anchor="middle">2100</text>
-              <text x="338" y="266" text-anchor="middle" fill="#79766f">年份 / 年</text>
-            </g>
-            <g clip-path="url(#plotClip)">
-              <!-- helper: y = 230 - pop/2500*202 -->
-              <!-- Historical line + dots 1990-2015 -->
-              <polyline fill="none" stroke="#d4a017" stroke-width="1.6"
-                points="56,213.8 81.6,204.1 107.3,191.2 133,177.4 158.5,161.3 184.2,145.1"/>
-              <g fill="#e0b020" stroke="#c49210" stroke-width="0.6">
-                <circle cx="56" cy="213.8" r="3.2"/>
-                <circle cx="68.8" cy="209.5" r="3.2"/>
-                <circle cx="81.6" cy="204.1" r="3.2"/>
-                <circle cx="94.4" cy="197.8" r="3.2"/>
-                <circle cx="107.3" cy="191.2" r="3.2"/>
-                <circle cx="120.1" cy="184.5" r="3.2"/>
-                <circle cx="133" cy="177.4" r="3.2"/>
-                <circle cx="145.8" cy="169.5" r="3.2"/>
-                <circle cx="158.5" cy="161.3" r="3.2"/>
-                <circle cx="171.4" cy="153.2" r="3.2"/>
-                <circle cx="184.2" cy="145.1" r="3.2"/>
-              </g>
-              <!-- census jump connector -->
-              <line x1="184.2" y1="145.1" x2="184.2" y2="100.5" stroke="#d4a017" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.7"/>
-              <!-- Scenario A high (cyan) peaks ~2030万@2035 -->
-              <path fill="none" stroke="#5eb8e8" stroke-width="1.8"
-                d="M184.2,100.5 C210,88 235,72 261.1,65.8 C290,62 320,68 363.6,78 C420,95 480,115 620,148"/>
-              <!-- Scenario B mid-blue -->
-              <path fill="none" stroke="#3a8ec4" stroke-width="1.6"
-                d="M184.2,105 C210,94 235,80 261.1,74.5 C295,72 330,80 363.6,92 C430,115 500,140 620,168"/>
-              <!-- Scenario C orange -->
-              <path fill="none" stroke="#e0893a" stroke-width="1.5"
-                d="M184.2,112 C210,102 240,92 261.1,88 C300,86 340,96 363.6,108 C440,135 520,160 620,185"/>
-              <!-- Scenario D yellow-gold lower -->
-              <path fill="none" stroke="#e6c04a" stroke-width="1.5"
-                d="M184.2,118 C210,110 240,102 261.1,98 C305,97 345,108 363.6,120 C450,150 530,175 620,198"/>
-              <!-- Peak gold vertical @ ~2035 -->
-              <line x1="286.7" y1="28" x2="286.7" y2="230" stroke="#d4a017" stroke-width="1.8"/>
-            </g>
-            <!-- Peak callout -->
-            <rect x="248" y="8" width="78" height="18" rx="2" fill="#d4a017"/>
-            <text x="287" y="20.5" text-anchor="middle" fill="#fff" font-size="9.5" font-family="Inter,sans-serif" font-weight="600">人口峰值2030万</text>
-            <!-- Phase arrows -->
-            <g fill="#6a6760" font-size="8.5" font-family="Inter,sans-serif">
-              <text x="120" y="40" text-anchor="middle">爆发式增长</text>
-              <text x="235" y="40" text-anchor="middle">平稳增长</text>
-              <text x="450" y="40" text-anchor="middle">缓慢下降</text>
-            </g>
-            <g stroke="#8a867c" stroke-width="0.8" fill="none">
-              <line x1="62" y1="44" x2="178" y2="44"/><polyline points="62,44 66,41 66,47 62,44"/><polyline points="178,44 174,41 174,47 178,44"/>
-              <line x1="190" y1="44" x2="286" y2="44"/><polyline points="190,44 194,41 194,47 190,44"/><polyline points="286,44 282,41 282,47 286,44"/>
-              <line x1="300" y1="44" x2="610" y2="44"/><polyline points="300,44 304,41 304,47 300,44"/><polyline points="610,44 606,41 606,47 610,44"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
+<figure class="hero-visual" aria-label="深圳宝安中心区鸟瞰">
+          <img src="assets/chuangyelu-aerial.jpg" alt="深圳宝安中心区鸟瞰图" />
+          <figcaption>宝安中心区 · 鸟瞰</figcaption>
+        </figure>
+</div>
   </div>
 </section>
 
