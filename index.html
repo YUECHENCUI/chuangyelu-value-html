@@ -123,7 +123,7 @@
 .ov-footer-en{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-top:6px}
 /* district */
 .slide.district{padding:0}
-.district-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(220px,0.7fr);gap:clamp(28px,4vw,56px);align-items:center;width:min(92%,1380px);margin:0 auto;height:calc(100svh - 16vh);padding:2vh 0}
+.district-layout{display:grid;grid-template-columns:65% 35%;height:100svh;width:100%}
 .map-pane{position:relative;overflow:hidden;background:#1a1a1a;height:100%}
 .map-pane img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .map-pane:after{content:"";position:absolute;top:0;right:0;bottom:0;width:7%;min-width:48px;max-width:96px;pointer-events:none;z-index:3;background:linear-gradient(90deg,rgba(246,243,237,0) 0%,rgba(246,243,237,.35) 42%,rgba(246,243,237,.82) 78%,rgba(246,243,237,1) 100%)}
@@ -177,17 +177,6 @@
 .slide:has(.ov-wrap) .smallcap{margin-bottom:0.6vh}.slide:has(.ov-wrap) .slide-content{padding-top:0;align-self:stretch;height:100%;display:flex;flex-direction:column}
 .collage-aligned .tile.half{margin:0;width:100%}
 .ai-diagrams img{width:100%;height:auto;display:block;vertical-align:top}
-.slide:has(.district-layout){padding:7vh 6vw 8vh}.slide:has(.district-layout) .slide-content{width:100%}
-
-/* district whitespace overrides */
-.slide.district{padding:6.5vh 5.5vw 7.5vh!important;background:var(--paper)}
-.slide.district .district-layout{display:grid!important;grid-template-columns:minmax(0,1.45fr) minmax(240px,.78fr)!important;gap:clamp(32px,5vw,72px)!important;align-items:center!important;width:min(90%,1320px)!important;height:auto!important;min-height:calc(100svh - 18vh)!important;margin:0 auto!important;padding:0!important}
-.slide.district .district-layout > *:first-child,
-.slide.district .map-pane{min-width:0;max-height:min(68vh,640px);display:flex;align-items:center;justify-content:flex-start;overflow:hidden;border-radius:2px}
-.slide.district .district-layout img,
-.slide.district .map-pane img{width:100%;height:auto;max-height:min(68vh,640px);object-fit:contain!important;object-position:left center;display:block}
-.slide.district .side-panel,.slide.district .district-side{padding:0 1vw 0 0;display:flex;align-items:center}
-.slide.district .district-eyebrow{position:static;color:var(--muted);text-shadow:none;margin:0 0 1.5vh;letter-spacing:.18em}
 
 </style>
 </head>
