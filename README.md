@@ -16,9 +16,9 @@
 
 1. 用 Chrome / Edge / Safari 打开 `index.html`（支持 `file://`）。
 2. 翻页：键盘 `←` `→` / `空格`，或底部按钮；`N` 讲述提示，`F` 全屏。
-3. GitHub Pages：https://yuechencui.github.io/chuangyelu-value-html/?v=13
+3. GitHub Pages：https://yuechencui.github.io/chuangyelu-value-html/?v=17
 
-## 页面结构（20 页）
+## 页面结构（21 页）
 
 ### 价值判断（01–07）
 | # | 主题 | 视觉 |
@@ -46,17 +46,19 @@
 | 13 | 城心 · 灵芝片区 | 片区地图 + 侧栏 |
 | 14 | L1 低成本弹性产业空间 | 生命周期曲线 SVG |
 | 15 | L2 街巷特征 | 曼哈顿 / 新安对比 |
-| 16 | L3 微更新策略 | 轴测图 hero |
-| 17 | L4 创意社区转型 | 密板全幅图 |
-| 18 | L5 街—巷—道体系 | 目的地系统地图 |
-| 19 | L6 街巷道三例 | 道 / 街 / 巷 三案 |
-| 20 | 山心 · 尖岗山片区 | 片区地图 + 侧栏 |
+| 16 | L3 微更新策略 | 轴测图全幅 bleed |
+| 17 | 案例 · Corgi Cafe | SF 空间产品（内景 + 三卡） |
+| 18 | L4 创意社区转型 | SVG 演化 / 图例 / 垂直叠合 |
+| 19 | L5 街—巷—道体系 | 目的地系统地图 |
+| 20 | L6 街巷道三例 | 道 / 街 / 巷 三案 |
+| 21 | 山心 · 尖岗山片区 | 片区地图 + 侧栏 |
 
 ## 目录
 
 ```
 assets/                 # 拼贴、地图、桥接背景、lingzhi/
-assets/lingzhi/         # 城心六页专用图
+assets/lingzhi/         # 城心灵芝页专用图
+assets/corgi/           # Corgi Cafe 案例图
 index.html              # TEKUMA×MLA+ scroll-snap 主文件
 index.serif-prev.html   # 旧版衬线/fade 备份
 README.md
