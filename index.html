@@ -555,6 +555,13 @@
 .close-slogan{font-size:clamp(26px,2.8vw,46px);font-weight:620;letter-spacing:-.03em;line-height:1.45;max-width:920px}
 .close-meta{margin-top:clamp(36px,6vh,72px);font-size:clamp(12px,.9vw,15px);letter-spacing:.14em;color:rgba(247,242,231,.55)}
 
+
+.cover-graph.cover-amber{position:absolute;right:-4vw;bottom:-8vh;top:auto;width:min(52vw,780px);height:auto;max-height:78vh;opacity:.95;transform:none;object-fit:contain;pointer-events:none;z-index:1}
+.cover-slide .slide-content{position:relative;z-index:2}
+@media(max-width:960px){
+  .cover-graph.cover-amber{right:-18vw;opacity:.35;width:70vw;bottom:0}
+}
+
 </style>
 </head>
 <body>
@@ -563,7 +570,7 @@
 
 <!-- I00 Cover · 创业路新使命 -->
 <section class="slide cover-slide" data-note="我们今天希望先提出一个问题：在深圳进入新的城市创新阶段、人工智能快速发展的时间节点，创业路正在承担怎样的新使命？随后介绍我们的联合体，再分享场地认知与三个核心问题。">
-  <svg class="cover-graph" viewBox="0 0 620 690" aria-hidden="true"><path class="heavy" d="M60 565 C155 440 288 360 410 200 S545 70 580 34"/><path class="heavy" d="M78 62 C191 158 300 289 404 393 S532 523 570 623"/><path d="M18 523C180 406 295 315 535 20M108 620C239 465 348 360 609 189M92 102C221 241 328 337 587 540M15 165C202 286 338 471 524 649"/><circle cx="351" cy="337" r="8"/><circle cx="449" cy="189" r="6"/><circle cx="210" cy="461" r="6"/></svg>
+  <img class="cover-graph cover-amber" src="assets/intro/cover-bg.jpg?v=1" alt="" aria-hidden="true">
   <div class="slide-content">
     <p class="smallcap">宝安创业路“一轴三心”城市设计 · 前期思路交流</p>
     <h1 class="cover-hero">创业路</h1>
