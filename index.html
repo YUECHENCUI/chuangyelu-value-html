@@ -596,7 +596,9 @@ addEventListener('load',()=>{
   if(!q) return;
   const i=+q-1;
   const slides=[...document.querySelectorAll('section.slide')];
-  if(slides[i]) slides[i].scrollIntoView({behavior:'instant'});
+  const go=()=>{ if(slides[i]){ slides[i].scrollIntoView({behavior:'instant', block:'start'}); window.scrollTo(0, slides[i].offsetTop); } };
+  go(); setTimeout(go, 50); setTimeout(go, 250);
 });
-</script></body>
+</script>
+</body>
 </html>
