@@ -582,6 +582,35 @@
 .model-3d-slide{padding:0!important;align-items:stretch!important}
 .model-3d-frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#111}
 
+
+
+.cover-sphere{background:#ebebeb!important;padding:0!important;overflow:hidden}
+.cover-sphere:before{display:none!important}
+.cover-ball{
+  position:absolute;
+  right:12vw;
+  top:50%;
+  transform:translateY(-50%);
+  width:min(54vw,700px);
+  height:auto;
+  z-index:1;
+  pointer-events:none;
+  filter:drop-shadow(0 18px 40px rgba(0,0,0,.12));
+}
+.cover-sphere-content{
+  position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;
+  padding:10vh 7.4vw;max-width:640px;margin:0;background:transparent;
+}
+.cover-sphere .cover-hero{color:#1a1a1a;margin:1.2vh 0 1.6vh -4px;font-size:clamp(88px,10.5vw,180px);white-space:nowrap}
+.cover-sphere .cover-strap{color:#222;font-weight:560;letter-spacing:-.04em;font-size:clamp(28px,3vw,48px);line-height:1.25;max-width:560px}
+.cover-sphere .cover-sub{color:#555;max-width:480px;margin-top:2.2vh;font-size:clamp(15px,1.15vw,20px);line-height:1.7}
+.cover-sphere .cover-team{margin-top:4.5vh;font-size:clamp(14px,1.05vw,18px);letter-spacing:.08em;color:#333;font-weight:560}
+.cover-sphere-cap{color:#c45a30!important;margin-bottom:1.5vh}
+@media(max-width:960px){
+  .cover-ball{right:-8vw;width:58vw;opacity:.85}
+  .cover-sphere-content{max-width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -589,10 +618,10 @@
 <main class="slides" id="slides">
 
 <!-- I00 Cover · 创业路新使命 -->
-<section class="slide cover-slide" data-note="我们今天希望先提出一个问题：在深圳进入新的城市创新阶段、人工智能快速发展的时间节点，创业路正在承担怎样的新使命？随后介绍我们的联合体，再分享场地认知与三个核心问题。">
-  <img class="cover-graph cover-amber" src="assets/intro/cover-bg.jpg?v=2" alt="" aria-hidden="true">
-  <div class="slide-content">
-    <p class="smallcap">宝安创业路“一轴三心”城市设计 · 前期思路交流</p>
+<section class="slide cover-slide cover-sphere" data-note="我们今天希望先提出一个问题：在深圳进入新的城市创新阶段、人工智能快速发展的时间节点，创业路正在承担怎样的新使命？随后介绍我们的联合体，再分享场地认知与三个核心问题。">
+  <img class="cover-ball" src="assets/intro/cover-ball.png?v=3" alt="" aria-hidden="true">
+  <div class="slide-content cover-sphere-content">
+    <p class="smallcap cover-sphere-cap">宝安创业路“一轴三心”城市设计 · 前期思路交流</p>
     <h1 class="cover-hero">创业路</h1>
     <h2 class="cover-strap">深圳城市再生长的<br><span class="accent">新使命</span></h2>
     <p class="cover-sub">重新理解一条从山到海的城市轴线，探索深圳下一代创新城市的可能性。</p>
