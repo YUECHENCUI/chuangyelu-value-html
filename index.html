@@ -307,7 +307,6 @@
 
 /* Corgi Cafe case insert */
 .lz-corgi{padding:5.5vh 5.5vw 5vh!important}
-.lz-corgi .slide-content{height:100%;display:flex;flex-direction:column;max-width:1580px;gap:clamp(8px,1.2vh,14px)}
 .lz-corgi .smallcap{margin-bottom:.3vh}
 .lz-corgi .cg-title{font-size:clamp(22px,2.2vw,36px);margin:0;line-height:1.28;letter-spacing:-.04em;font-weight:580;max-width:1100px}
 .cg-layout{flex:1;min-height:0;display:grid;grid-template-columns:minmax(280px,.95fr) minmax(340px,1.15fr);gap:clamp(16px,2.4vw,36px);align-items:stretch}
@@ -338,17 +337,7 @@
 
 
 
-.cg-card-img{width:100%;aspect-ratio:4/3;max-height:min(16vh,148px);overflow:hidden;border-radius:3px;margin:0 0 8px;background:#e8e4db}
-.cg-card-img img{width:100%;height:100%;object-fit:cover;display:block;object-position:center}
-.cg-cards{align-items:stretch;margin-top:2px}
-.cg-card{display:flex;flex-direction:column;min-width:0}
 .cg-card h3{margin-top:4px}
-.lz-corgi .slide-content{height:100%;display:flex;flex-direction:column;min-height:0}
-.lz-corgi .cg-layout{flex:1;min-height:0}
-.lz-corgi .cg-right{overflow:visible}
-@media (max-width:900px){
-  .cg-card-img{aspect-ratio:16/10;max-height:140px}
-}
 
 
 /* Frontier Tower case — after 山心 */
@@ -392,6 +381,20 @@
 .ov-deep-lines div{font-size:clamp(11px,1.05vw,15px);font-weight:600;color:var(--ink);line-height:1.35;letter-spacing:-.01em}
 .ov-deep .ov-basemap,.ov-deep .ov-circles{transform:translateY(11vh)}
 .ov-deep .ov-bottom{padding-top:4px}
+
+
+.cg-card-img{width:100%;aspect-ratio:3/4;max-height:min(22vh,200px);overflow:hidden;border-radius:3px;margin:8px 0 0;background:#e8e4db;flex:0 0 auto}
+.cg-card-img img{width:100%;height:100%;object-fit:cover;display:block;object-position:center}
+.cg-cards{align-items:stretch;margin-top:2px}
+.cg-card{display:flex;flex-direction:column;min-width:0}
+.lz-corgi .slide-content{height:100%;display:flex;flex-direction:column;min-height:0}
+.lz-corgi .cg-layout{flex:1;min-height:0}
+.lz-corgi .cg-right{min-height:0;overflow:hidden}
+.lz-corgi .cg-story{flex:0 0 auto}
+.lz-corgi .cg-callout{flex:0 0 auto;margin-top:auto}
+@media (max-width:900px){
+  .cg-card-img{aspect-ratio:3/4;max-height:180px}
+}
 
 </style>
 </head>
@@ -854,19 +857,19 @@
             <div class="n">01</div>
             <h3>一层磁体 + 上层办公</h3>
             <p>死掉的临街铺面改成全天候 Builder Cafe；公司总部在同楼上办公。</p>
-            <div class="cg-card-img"><img src="assets/corgi/card-01-exterior.jpg?v=2" alt="Corgi Cafe 橙色外立面"></div>
+            <div class="cg-card-img"><img src="assets/corgi/card-01-exterior.jpg?v=3" alt="Corgi Cafe 橙色外立面"></div>
           </div>
           <div class="cg-card">
             <div class="n">02</div>
             <h3>谁在聚集</h3>
             <p>OPC · Indie · Founder 的 watering hole；VC 也会在此扫人才。</p>
-            <div class="cg-card-img"><img src="assets/corgi/card-02-gather.jpg?v=2" alt="Builders 在 Cafe 聚集办公"></div>
+            <div class="cg-card-img"><img src="assets/corgi/card-02-gather.jpg?v=3" alt="Builders 在 Cafe 聚集办公"></div>
           </div>
           <div class="cg-card">
             <div class="n">03</div>
             <h3>空间即漏斗</h3>
             <p>第三空间叠监管金融产品入口——Cafe 是品牌与社区磁铁。</p>
-            <div class="cg-card-img"><img src="assets/corgi/card-03-funnel.jpg?v=2" alt="空间改造成为产品入口"></div>
+            <div class="cg-card-img"><img src="assets/corgi/card-03-funnel.jpg?v=3" alt="空间改造成为产品入口"></div>
           </div>
         </div>
         <div class="cg-callout">
