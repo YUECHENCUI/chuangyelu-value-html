@@ -390,13 +390,14 @@
 .lz-corgi .cg-story{flex:0 0 auto}
 .lz-corgi .cg-callout{flex:0 0 auto;margin-top:auto}
 @media (max-width:900px){
-  .cg-card-img{aspect-ratio:3/4;max-height:180px}
 }
 
 
-.cg-cards{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:10px;align-items:start}
-.cg-card-img{width:100%!important;height:auto!important;aspect-ratio:3/4!important;max-height:none!important;overflow:hidden;border-radius:3px;margin:8px 0 0;background:#e8e4db}
-.cg-card-img img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center;display:block}
+
+
+.cg-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px;align-items:start}
+.cg-card-img{position:relative;width:100%!important;aspect-ratio:3/4!important;height:0!important;padding-bottom:133.333%!important;max-height:none!important;overflow:hidden;border-radius:3px;margin:8px 0 0;background:#e8e4db}
+.cg-card-img img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center;display:block}
 
 </style>
 </head>
@@ -859,19 +860,19 @@
             <div class="n">01</div>
             <h3>一层磁体 + 上层办公</h3>
             <p>死掉的临街铺面改成全天候 Builder Cafe；公司总部在同楼上办公。</p>
-            <div class="cg-card-img"><img src="assets/corgi/card-01-exterior.jpg?v=4" alt="Corgi Cafe 橙色外立面"></div>
+            <div class="cg-card-img"><img src="assets/corgi/card-01-exterior.jpg?v=5" alt="Corgi Cafe 橙色外立面"></div>
           </div>
           <div class="cg-card">
             <div class="n">02</div>
             <h3>谁在聚集</h3>
             <p>OPC · Indie · Founder 的 watering hole；VC 也会在此扫人才。</p>
-            <div class="cg-card-img"><img src="assets/corgi/card-02-gather.jpg?v=4" alt="Builders 在 Cafe 聚集办公"></div>
+            <div class="cg-card-img"><img src="assets/corgi/card-02-gather.jpg?v=5" alt="Builders 在 Cafe 聚集办公"></div>
           </div>
           <div class="cg-card">
             <div class="n">03</div>
             <h3>空间即漏斗</h3>
             <p>第三空间叠监管金融产品入口——Cafe 是品牌与社区磁铁。</p>
-            <div class="cg-card-img"><img src="assets/corgi/card-03-funnel.jpg?v=4" alt="空间改造成为产品入口"></div>
+            <div class="cg-card-img"><img src="assets/corgi/card-03-funnel.jpg?v=5" alt="空间改造成为产品入口"></div>
           </div>
         </div>
         <div class="cg-callout">
