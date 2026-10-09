@@ -335,6 +335,15 @@
   .cg-cards{grid-template-columns:1fr}
 }
 
+
+.cg-card-img{width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:3px;margin-bottom:10px;background:#e8e4db}
+.cg-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cg-cards{align-items:start}
+.cg-card{display:flex;flex-direction:column}
+@media (max-width:900px){
+  .cg-card-img{aspect-ratio:16/10;max-height:160px}
+}
+
 </style>
 </head>
 <body>
@@ -793,16 +802,19 @@
         </p>
         <div class="cg-cards">
           <div class="cg-card">
+            <div class="cg-card-img"><img src="assets/corgi/card-01-exterior.jpg?v=1" alt="Corgi Cafe 橙色外立面"></div>
             <div class="n">01</div>
             <h3>一层磁体 + 上层办公</h3>
             <p>死掉的临街铺面改成全天候 Builder Cafe；公司总部在同楼上办公。</p>
           </div>
           <div class="cg-card">
+            <div class="cg-card-img"><img src="assets/corgi/card-02-gather.jpg?v=1" alt="Builders 在 Cafe 聚集办公"></div>
             <div class="n">02</div>
             <h3>谁在聚集</h3>
             <p>OPC · Indie · Founder 的 watering hole；VC 也会在此扫人才。</p>
           </div>
           <div class="cg-card">
+            <div class="cg-card-img"><img src="assets/corgi/card-03-funnel.jpg?v=1" alt="空间改造成为产品入口"></div>
             <div class="n">03</div>
             <h3>空间即漏斗</h3>
             <p>第三空间叠监管金融产品入口——Cafe 是品牌与社区磁铁。</p>
