@@ -204,6 +204,47 @@
 .life-collage img{width:100%;height:100%;object-fit:cover;border-radius:3px;display:block}
 .life-collage img:first-child{grid-row:1/-1}
 
+
+/* 灵芝 / 城心 insert pages */
+.lz-stack{display:flex;flex-direction:column;gap:clamp(14px,2.2vh,28px);width:100%;height:100%;justify-content:center}
+.lz-stack .lz-copy{max-width:1180px}
+.lz-stack .lz-copy .sublead,.lz-stack .lz-copy .lz-body{font-size:clamp(16px,1.35vw,24px);line-height:1.72;color:#3f433e;max-width:1100px;font-weight:520;letter-spacing:-.02em}
+.lz-stack .lz-visual{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-end}
+.lz-figure{margin:0;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#fbfaf6;box-shadow:0 12px 40px rgba(35,32,25,.07);display:flex;flex-direction:column;min-height:0}
+.lz-figure img,.lz-figure object{width:100%;height:auto;display:block;max-height:min(52vh,560px);object-fit:contain;background:#fbfaf6}
+.lz-figure figcaption{padding:10px 14px;font-size:clamp(11px,.85vw,14px);color:var(--muted);letter-spacing:.04em;border-top:1px solid var(--line);line-height:1.5}
+.lz-stats{display:flex;gap:clamp(18px,3vw,42px);margin-top:18px;flex-wrap:wrap}
+.lz-stats .stat-item .stat-num{font-size:clamp(26px,2.8vw,40px);color:var(--orange)}
+.lz-axon{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(340px,1.2fr);gap:clamp(20px,3vw,48px);align-items:center;width:100%}
+.lz-axon .col-text .sublead{max-width:520px}
+.lz-axon .hero-visual img{max-height:min(68vh,700px);object-fit:contain;background:#f4f1ea;min-height:320px}
+.lz-board{padding:6.5vh 5.5vw 5.5vh;display:flex;flex-direction:column}
+.lz-board .slide-content{height:100%;display:flex;flex-direction:column;max-width:1600px}
+.lz-board .lz-board-frame{flex:1;min-height:0;margin-top:1.2vh;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 10px 36px rgba(35,32,25,.08);display:flex;align-items:center;justify-content:center}
+.lz-board .lz-board-frame img{width:100%;height:100%;object-fit:contain;display:block;max-height:calc(100svh - 18vh)}
+.lz-map-slide{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:14px;height:calc(100svh - 14vh);width:100%}
+.lz-map-slide .lz-map-frame{min-height:0;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#f7f5ef;box-shadow:0 10px 36px rgba(35,32,25,.07)}
+.lz-map-slide .lz-map-frame img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block}
+.lz-map-slide .lz-map-copy{max-width:1200px}
+.lz-map-slide .lz-map-copy .sublead{font-size:clamp(15px,1.2vw,22px);max-width:1100px}
+.lz-cases{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr) minmax(0,.92fr);gap:12px;height:calc(100svh - 16vh);width:100%;margin-top:1vh}
+.lz-cases .case{margin:0;position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#efebe2;min-height:0;display:flex;flex-direction:column}
+.lz-cases .case.wide{grid-column:1/-1}
+.lz-cases .case img{width:100%;flex:1;object-fit:cover;object-position:center;display:block;min-height:0}
+.lz-cases .case-label{position:absolute;left:0;right:0;top:0;padding:14px 16px 18px;background:linear-gradient(180deg,rgba(246,243,237,.96) 0%,rgba(246,243,237,.78) 55%,rgba(246,243,237,0) 100%);pointer-events:none}
+.lz-cases .case-label .k{font-size:clamp(16px,1.45vw,22px);font-weight:650;letter-spacing:-.03em;line-height:1.25;color:var(--ink)}
+.lz-cases .case-label .k span{color:var(--orange)}
+.lz-cases .case-label .d{font-size:clamp(12px,.9vw,15px);color:#5b5c55;margin-top:4px;line-height:1.4}
+@media(max-width:960px){
+  .lz-axon{grid-template-columns:1fr}
+  .lz-cases{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
+  .lz-cases .case{min-height:28vh}
+  .lz-cases .case img{min-height:24vh}
+  .lz-map-slide{height:auto}
+  .lz-map-slide .lz-map-frame{min-height:42vh}
+  .lz-board .lz-board-frame img{max-height:none}
+}
+
 </style>
 </head>
 <body>
@@ -567,6 +608,142 @@
         </div>
       </div>
     </aside>
+  </div>
+</section>
+
+
+<!-- 11a 灵芝 · 低成本弹性产业空间 -->
+<section class="slide light" data-note="AI 降低门槛，超级个体与 OPC 崛起，街巷与第三空间成为创新发生地；低成本弹性空间应对加速迭代的企业生长周期。">
+  <div class="slide-content">
+    <p class="smallcap">城心 · 灵芝　L1 / 低成本弹性产业空间</p>
+    <div class="lz-stack">
+      <div class="lz-copy">
+        <h2 class="large-title mid-title" style="font-size:clamp(22px,2.15vw,36px);max-width:1180px;line-height:1.45">
+          AI 降低知识获取、工具使用、创造能力与组织成本的门槛，超级个体 / 组织与 OPC 正在快速崛起，这使得街巷和第三空间越发成为创新发生地，<span class="accent">低成本空间</span>成为创新基础设施。
+        </h2>
+      </div>
+      <div class="lz-visual">
+        <figure class="lz-figure">
+          <img src="assets/lingzhi/lz-s1-chart.svg" alt="企业生长周期加速：1900 / 2000 / 2024">
+          <figcaption>低成本弹性产业空间：应对加速迭代的企业生长周期</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11b 灵芝 · 街巷特征 -->
+<section class="slide warm" data-note="多样化街巷与低成本空间是灵芝最重要特征；街道网密度 7.5km/km²，街区尺度 120×80m，与曼哈顿核心区类似。">
+  <div class="slide-content">
+    <p class="smallcap">城心 · 灵芝　L2 / 街巷特征</p>
+    <div class="lz-stack">
+      <div class="lz-copy">
+        <h2 class="large-title mid-title" style="font-size:clamp(22px,2.05vw,34px);max-width:1180px;line-height:1.45">
+          多样化的街巷和低成本空间是灵芝最重要的特征。新安拥有多样尺度的街巷空间，既有城中村的市井小巷，也有现代的林荫主街。
+        </h2>
+        <div class="lz-stats">
+          <div class="stat-item">
+            <div class="stat-num">7.5<span> km/km²</span></div>
+            <div class="stat-label">街道网密度</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">120×80<span> m</span></div>
+            <div class="stat-label">街区尺度 · 近曼哈顿核心区</div>
+          </div>
+        </div>
+        <p class="sublead" style="margin-top:18px;max-width:980px;font-size:clamp(14px,1.05vw,18px)">
+          街巷及转角空间丰富，较高的连通性为街道空间带来更多活力，也使街道具备更强的改造更新潜力。
+        </p>
+      </div>
+      <div class="lz-visual">
+        <figure class="lz-figure">
+          <img src="assets/lingzhi/lz-s2-compare.jpg" alt="曼哈顿与新安街区肌理对比" style="max-height:min(42vh,460px);object-fit:cover">
+          <figcaption>曼哈顿核心区　｜　新安：平均街区尺度 120×80m</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11c 灵芝 · 微更新策略 -->
+<section class="slide light" data-note="通过对低成本空间的微更新，形成适合年轻群体生活生产方式的创新空间，成为超级个体来深创业的第一落脚点。">
+  <div class="slide-content">
+    <p class="smallcap">城心 · 灵芝　L3 / 微更新策略</p>
+    <div class="lz-axon">
+      <div class="col-text">
+        <h2 class="large-title mid-title">微更新<br>形成<span class="accent">创新空间</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead">
+          策略是通过对低成本空间的微更新，形成适合当代年轻群体生活生产方式的创新空间，成为超级个体 / 组织来深创业的<strong>第一落脚点</strong>。
+        </p>
+        <div class="callout orange" style="margin-top:26px">
+          <p>FOOD · CAFE · PARK · SHOP · BAR —— 街巷里的第三空间网络</p>
+        </div>
+      </div>
+      <div class="col-visual">
+        <figure class="hero-visual">
+          <img src="assets/lingzhi/lz-s3-axon.jpg" alt="灵芝片区低成本空间微更新轴测示意">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11d 灵芝 · 创意社区转型（密板全幅） -->
+<section class="slide warm lz-board" data-note="由低成本社区转向适应未来的创意社区：从单一租赁化住房，到混合居住、共享与创意空间的多元社区。">
+  <div class="slide-content">
+    <p class="smallcap">城心 · 灵芝　L4 / 创意社区转型</p>
+    <h2 class="large-title mid-title" style="font-size:clamp(24px,2.4vw,40px);margin-bottom:4px">由低成本社区转向适应未来的<span class="accent">创意社区</span></h2>
+    <div class="lz-board-frame">
+      <img src="assets/lingzhi/lz-page-4.jpg" alt="由低成本社区转向适应未来的创意社区全图">
+    </div>
+  </div>
+</section>
+
+<!-- 11e 灵芝 · 街-巷-道体系 -->
+<section class="slide light" data-note="街巷可成为各具特色的可逛目的地系统，归纳为：街—巷—道，服务多元人群的日常美好生活。">
+  <div class="slide-content">
+    <p class="smallcap">城心 · 灵芝　L5 / 街—巷—道</p>
+    <div class="lz-map-slide">
+      <div class="lz-map-frame">
+        <img src="assets/lingzhi/lz-s5-map.jpg" alt="灵芝片区街—巷—道目的地体系地图">
+      </div>
+      <div class="lz-map-copy">
+        <p class="sublead" style="margin:0">
+          而这里的街巷可以成为各具特色的可以逛的目的地系统，希望能为更加多元的人群提供日常美好生活的目的地，我们把这个体系归纳为：<strong class="accent">街 — 巷 — 道</strong>。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11f 灵芝 · 街巷道三例 -->
+<section class="slide warm" data-note="三例：道—创业路（风景林荫道）；街—建安一路（潮流商业街）；巷—怡康巷（市井烟火与创意交融）。">
+  <div class="slide-content">
+    <p class="smallcap">城心 · 灵芝　L6 / 街巷道三例</p>
+    <div class="lz-cases">
+      <figure class="case">
+        <div class="case-label">
+          <div class="k"><span>道</span> · 创业路</div>
+          <div class="d">多样速率的风景林荫道</div>
+        </div>
+        <img src="assets/lingzhi/lz-s6-dao.jpg" alt="道 · 创业路：多样速率的风景林荫道">
+      </figure>
+      <figure class="case">
+        <div class="case-label">
+          <div class="k"><span>街</span> · 建安一路</div>
+          <div class="d">弹性可变的潮流商业街</div>
+        </div>
+        <img src="assets/lingzhi/lz-s6-jie.jpg" alt="街 · 建安一路：弹性可变的潮流商业街">
+      </figure>
+      <figure class="case wide">
+        <div class="case-label">
+          <div class="k"><span>巷</span> · 怡康巷</div>
+          <div class="d">市井烟火与创意交融的活力里巷</div>
+        </div>
+        <img src="assets/lingzhi/lz-s6-xiang.jpg" alt="巷 · 怡康巷：市井烟火与创意交融的活力里巷">
+      </figure>
+    </div>
   </div>
 </section>
 

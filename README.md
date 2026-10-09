@@ -16,8 +16,9 @@
 
 1. 用 Chrome / Edge / Safari 打开 `index.html`（支持 `file://`）。
 2. 翻页：键盘 `←` `→` / `空格`，或底部按钮；`N` 讲述提示，`F` 全屏。
+3. GitHub Pages：https://yuechencui.github.io/chuangyelu-value-html/?v=13
 
-## 页面结构（12 页）
+## 页面结构（20 页）
 
 ### 价值判断（01–07）
 | # | 主题 | 视觉 |
@@ -35,21 +36,28 @@
 |---|------|------|
 | 08 | 总体战略定位 | `.slide.dark` 航拍全Bleed + 白字标题卡 |
 
-### 三区结构（09–12）
+### 三区结构（09–20）
 | # | 主题 | 视觉 |
 |---|------|------|
 | 09 | 三类创新生态总览 | 总图 + 三区主张 |
 | 10 | 海心 · 宝安中心区 | 片区地图 + 侧栏 |
-| 11 | 城心 · 灵芝片区 | 片区地图 + 侧栏 |
-| 12 | 山心 · 尖岗山片区 | 片区地图 + 侧栏 |
+| 11 | 具身智能港 | 企业集聚图 |
+| 12 | 宝安中心区生活舞台 | 生活拼贴 |
+| 13 | 城心 · 灵芝片区 | 片区地图 + 侧栏 |
+| 14 | L1 低成本弹性产业空间 | 生命周期曲线 SVG |
+| 15 | L2 街巷特征 | 曼哈顿 / 新安对比 |
+| 16 | L3 微更新策略 | 轴测图 hero |
+| 17 | L4 创意社区转型 | 密板全幅图 |
+| 18 | L5 街—巷—道体系 | 目的地系统地图 |
+| 19 | L6 街巷道三例 | 道 / 街 / 巷 三案 |
+| 20 | 山心 · 尖岗山片区 | 片区地图 + 侧栏 |
 
 ## 目录
 
 ```
-web/
-  index.html              # TEKUMA×MLA+ scroll-snap 主文件
-  index.serif-prev.html   # 旧版衬线/fade 备份
-  assets/                 # 拼贴、地图、桥接背景
-  screenshots/            # slide-01 … slide-12
-  README.md
+assets/                 # 拼贴、地图、桥接背景、lingzhi/
+assets/lingzhi/         # 城心六页专用图
+index.html              # TEKUMA×MLA+ scroll-snap 主文件
+index.serif-prev.html   # 旧版衬线/fade 备份
+README.md
 ```
