@@ -156,12 +156,12 @@
 .hero-visual figcaption{padding:8px 12px;font-size:clamp(11px,.85vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);background:transparent}
 
 
-.collage-aligned{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.collage-aligned{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:start;justify-content:start;width:100%;max-width:100%}
 .collage-aligned .tile{margin:0;display:flex;flex-direction:column;gap:6px;background:transparent;border:none;box-shadow:none;overflow:visible}
 .collage-aligned .tile.wide{grid-column:1/-1}
 .collage-aligned .tile img{width:100%;height:auto;display:block;border-radius:3px;object-fit:cover;background:#efebe2}
 .collage-aligned .tile.wide img{max-height:min(34vh,320px);object-fit:cover;object-position:center}
-.collage-aligned .tile.half img{aspect-ratio:4/3;object-fit:cover}
+.collage-aligned .tile.half img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left center}
 .collage-aligned figcaption{margin:0;font-size:clamp(11px,.78vw,13px);line-height:1.45;color:var(--muted);letter-spacing:.02em}
 
 
@@ -175,6 +175,7 @@
 .thesis-lines{margin:0;font-family:"Noto Serif SC","Songti SC","STSong",serif;font-size:clamp(26px,2.85vw,44px);font-weight:500;line-height:1.9;letter-spacing:.04em;color:var(--ink);max-width:22em}
 
 .slide:has(.ov-wrap) .smallcap{margin-bottom:0.6vh}.slide:has(.ov-wrap) .slide-content{padding-top:0;align-self:stretch;height:100%;display:flex;flex-direction:column}
+.collage-aligned .tile.half{margin:0;width:100%}
 </style>
 </head>
 <body>
