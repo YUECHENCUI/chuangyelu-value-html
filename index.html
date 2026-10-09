@@ -52,7 +52,7 @@
 .chart-card{background:#fbfaf6;border:1px solid var(--line);border-radius:4px;padding:14px 16px 10px;box-shadow:0 12px 40px rgba(35,32,25,.07)}
 .chart-card h3{margin:0 0 8px;font-weight:600;font-size:clamp(14px,1.35vw,17px);text-align:center;letter-spacing:-.02em}
 .chart-card svg{width:100%;height:auto;display:block}
-.ai-diagrams{display:flex;flex-direction:column;gap:18px;background:#fbfaf6;border:1px solid var(--line);border-radius:4px;padding:16px 18px 14px}
+.ai-diagrams{background:transparent;border:none;border-radius:0;padding:0;overflow:visible;width:100%}
 .ai-diagrams svg{width:100%;height:auto;display:block}
 .two-points{display:grid;gap:22px;margin-top:8px}
 .two-points .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
@@ -176,6 +176,7 @@
 
 .slide:has(.ov-wrap) .smallcap{margin-bottom:0.6vh}.slide:has(.ov-wrap) .slide-content{padding-top:0;align-self:stretch;height:100%;display:flex;flex-direction:column}
 .collage-aligned .tile.half{margin:0;width:100%}
+.ai-diagrams img{width:100%;height:auto;display:block;vertical-align:top}
 </style>
 </head>
 <body>
@@ -225,8 +226,8 @@
         </p>
       </div>
       <div class="col-visual">
-<div class="ai-diagrams" aria-label="传统大型公司与AI原生公司示意">
-          <img src="assets/ai-diagram-original.png?v=3" alt="传统大型公司与AI原生公司对比原图" style="width:100%;height:auto;display:block;background:transparent">
+<div class="ai-diagrams">
+          <img src="assets/ai-unit-v4.png?v=5" alt="传统大型公司与AI原生公司">
         </div>
 </div>
   </div>
