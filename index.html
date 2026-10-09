@@ -107,7 +107,7 @@
 .bridge-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.25) 0%,rgba(0,0,0,.55) 70%,rgba(0,0,0,.72) 100%)}
 .bridge-content{position:relative;z-index:2;text-align:center;color:#f7f2e7;padding:0 6vw;max-width:1100px;margin:auto}
 .bridge-kicker{font-size:clamp(12px,1.2vw,14px);letter-spacing:.28em;font-weight:650;color:var(--orange2);margin-bottom:22px;text-transform:uppercase}
-.bridge-title{font-weight:580;font-size:clamp(22px,2.7vw,36px);line-height:1.5;letter-spacing:-.03em;margin:0 0 28px}
+.bridge-title{margin:0;font-size:clamp(22px,2.55vw,42px);font-weight:800;letter-spacing:.02em;line-height:1.35;color:#fff;display:flex;flex-wrap:nowrap;justify-content:center;align-items:baseline;gap:clamp(14px,2.2vw,36px);white-space:nowrap}
 .bridge-rule{width:42px;height:3px;background:var(--orange);margin:0 auto 28px}
 .bridge-slogan{font-size:clamp(15px,1.45vw,20px);letter-spacing:.08em;color:#c3c8c0;font-weight:480}
 .bridge-meta{position:absolute;top:7.5vh;left:7.4vw;right:7.4vw;z-index:3;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);text-transform:uppercase;pointer-events:none}
@@ -170,6 +170,11 @@
 .col-visual .collage{padding:0;background:transparent;border:none;box-shadow:none}
 .collage .tile, .collage-aligned .tile{background:transparent}
 .collage img{display:block;width:100%}
+
+.bridge-title span{font-weight:800;font-family:Inter,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;white-space:nowrap}
+
+.thesis-plain{display:flex;align-items:center;justify-content:center;height:100%;width:100%;text-align:center}
+.thesis-lines{margin:0;font-family:"Noto Serif SC","Songti SC","STSong",serif;font-size:clamp(20px,2.15vw,34px);font-weight:500;line-height:1.85;letter-spacing:.04em;color:var(--ink);max-width:48em}
 
 </style>
 </head>
@@ -446,25 +451,13 @@
 </section>
 
 <!-- 07 Closing thesis -->
-<section class="slide light" data-note="结题：存量如何成为未来。难点在正确理解当下与未来，把存量转化为真实需求，而非只做立面或一次性活化。">
-  <div class="slide-content">
-    <div class="closing-center">
-      <p class="smallcap">07 / 价值判断 · THESIS</p>
-      <h2 class="large-title">命题：<span class="accent">存量</span>如何成为<span class="accent" style="color:var(--forest)">未来</span></h2>
-      <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
-      <div class="closing-thesis">
-        创业路拥有孕育创新的多元基因，<br>
-        也拥有海山城美好生活的稀缺地理。<br><br>
-        <strong>真正的难题是转化。</strong>
-      </div>
-      <div class="challenge-bar">
-        <p>
-          <strong>核心挑战：</strong>这个项目难点在于正确理解当下和未来——<br>
-          如何通过更新与运营，把现在的存量空间转化为未来创新工作和美好生活的<strong>真实需求</strong>，
-          而不只是新建筑、新立面，或一次性的活化事件。
-        </p>
-      </div>
-    </div>
+<section class="slide light" data-note="结题：这个项目难点在于正确理解当下和未来，如何通过更新与运营，把存量空间转化为未来创新工作与美好生活的真实需求。">
+  <div class="slide-content thesis-plain">
+    <p class="thesis-lines">
+      这个项目难点在于正确理解当下和未来，<br>
+      如何通过更新与运营，把现在的存量空间转化为未来创新工作和<br>
+      美好生活的真实需求。
+    </p>
   </div>
 </section>
 
@@ -475,7 +468,7 @@
   <div class="slide-content" style="display:flex;align-items:center;justify-content:center;height:100%">
     <div class="bridge-content">
       <div class="bridge-kicker">总体战略定位</div>
-      <h2 class="bridge-title">AI 创新生态第一路　山海城美好生活栖居地　深圳城市再生长样本</h2>
+      <h2 class="bridge-title"><span>AI 创新生态第一路</span><span>山海城美好生活栖居地</span><span>深圳城市再生长样本</span></h2>
       <div class="bridge-rule"></div>
       <div class="bridge-slogan">让产业创新与美好生活，一同生长</div>
     </div>
