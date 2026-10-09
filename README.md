@@ -1,10 +1,21 @@
 # 创业路·价值判断 + 三区结构 — HTML 演讲稿
 
+## 模板
+
+现已统一为 **TEKUMA × MLA+** scroll-snap 模板（与 `source/template-ref.html` 同族）：
+
+- 色板：`--ink / --paper / --orange / --sea / --forest` 等
+- 字体：Inter + PingFang / Microsoft YaHei（**无** Noto Serif / 宋体标题；**无** Google Fonts 依赖，`file://` 可离线打开）
+- 结构：`<main class="slides">` + `<section class="slide">`，纵向 scroll-snap（100svh）
+- 顶栏 `.topbar`（mix-blend-mode: difference）+ 底栏 `.bottom-controls`（← → / N 讲述提示 / F 全屏）
+- 键盘：← →、空格、PageUp/Down、Home/End
+
+上一版（衬线 + fade 单屏翻页）备份为 `index.serif-prev.html`。
+
 ## 如何打开
 
 1. 用 Chrome / Edge / Safari 打开 `index.html`（支持 `file://`）。
-2. 翻页：键盘 `←` `→` / `空格`，或底部导航与圆点。
-3. Google Fonts（Noto Serif SC、Inter）需联网；离线回退系统宋体 / PingFang / 微软雅黑。
+2. 翻页：键盘 `←` `→` / `空格`，或底部按钮；`N` 讲述提示，`F` 全屏。
 
 ## 页面结构（12 页）
 
@@ -22,32 +33,23 @@
 ### 桥接（08）
 | # | 主题 | 视觉 |
 |---|------|------|
-| 08 | 总体战略定位 | 暗色航拍全Bleed + 白字标题卡 |
+| 08 | 总体战略定位 | `.slide.dark` 航拍全Bleed + 白字标题卡 |
 
 ### 三区结构（09–12）
 | # | 主题 | 视觉 |
 |---|------|------|
-| 09 | 三类创新生态总览 | 总图 + 三黄虚线圈 |
+| 09 | 三类创新生态总览 | 总图 + 三区主张 |
 | 10 | 海心 · 宝安中心区 | 片区地图 + 侧栏 |
 | 11 | 城心 · 灵芝片区 | 片区地图 + 侧栏 |
 | 12 | 山心 · 尖岗山片区 | 片区地图 + 侧栏 |
-
-Eyebrow：价值判断用 `01/07`…`07/07`；三区用 `创业路·三区结构 01/04`…；底栏计数为全局 `N / 12`。
-
-## 矢量图表
-
-- 第 1 页人口图由 `media/image16.png` 描摹为内联 SVG（未嵌 PNG）。
-- 第 2 页组织示意同为 SVG。
-- 对比图见 `screenshots/compare-01-chart.jpg`。
 
 ## 目录
 
 ```
 web/
-  index.html
-  assets/          # 拼贴、地图、桥接背景
-  screenshots/     # slide-01 … slide-12 + compare
+  index.html              # TEKUMA×MLA+ scroll-snap 主文件
+  index.serif-prev.html   # 旧版衬线/fade 备份
+  assets/                 # 拼贴、地图、桥接背景
+  screenshots/            # slide-01 … slide-12
   README.md
 ```
-
-样式沿用 base.html 暖米 TEKUMA 色板；桥接页为电影感暗底，其余为浅米色。

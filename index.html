@@ -1,623 +1,183 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>创业路·价值判断</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap">
+<title>创业路 · 深圳城市再生长的新使命｜TEKUMA × MLA+</title>
+<meta name="description" content="宝安创业路一轴三心城市设计·价值判断与三区结构｜TEKUMA × MLA+">
 <style>
-/* === 单屏翻页演讲稿 — 浅色暖米 TEKUMA×MLA+ === */
-:root {
-  --bg:        #f6f3ed;
-  --bg-card:   #efebe2;
-  --bg-soft:   #fbfaf6;
-  --fg:        #151614;
-  --fg-sub:    #4c504a;
-  --fg-muted:  #79766f;
-  --accent:    #d45a30;
-  --accent-lt: #f4a777;
-  --accent-2:  #507b83;
-  --accent-3:  #65735b;
-  --rule:      rgba(21,22,20,0.14);
-  --serif: 'Noto Serif SC', 'Songti SC', Georgia, serif;
-  --sans:  Inter, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  color-scheme: light;
-  box-sizing: border-box;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg:#f6f3ed; --bg-card:#efebe2; --fg:#151614; --fg-sub:#4c504a;
-    --fg-muted:#79766f; --accent:#d45a30; --rule:rgba(21,22,20,0.14);
-    color-scheme: light;
-  }
-}
-:root[data-theme="dark"] {
-  --bg:#f6f3ed; --bg-card:#efebe2; --fg:#151614; --fg-sub:#4c504a;
-  --fg-muted:#79766f; --accent:#d45a30; --rule:rgba(21,22,20,0.14);
-  color-scheme: light;
-}
-*, *::before, *::after { box-sizing: border-box; }
-html, body {
-  height: 100%; margin: 0;
-  background: var(--bg); color: var(--fg);
-  font-family: var(--sans); font-weight: 300;
-  overflow: hidden;
-}
-.deck { height: 100%; position: relative; overflow: hidden; }
-.slide {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 40px 5vw 88px;
-  opacity: 0; transform: translateY(32px);
-  transition: opacity 0.55s cubic-bezier(.4,0,.2,1), transform 0.55s cubic-bezier(.4,0,.2,1);
-  pointer-events: none;
-}
-.slide.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.slide.exit { opacity: 0; transform: translateY(-28px); transition: opacity 0.35s ease, transform 0.35s ease; }
+:root{--ink:#151614;--paper:#f6f3ed;--paper2:#efebe2;--muted:#79766f;--line:rgba(21,22,20,.18);--orange:#d45a30;--orange2:#f4a777;--sea:#507b83;--forest:#65735b;--dark:#171916;--soft:#ddd8cb}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y mandatory}body{margin:0;background:var(--paper);font-family:Inter,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}button{font:inherit}h1,h2,h3,p,figure{margin:0}p{line-height:1.55}.slides{width:100%}.slide{min-height:100svh;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;padding:8.2vh 7.4vw 8vh;display:flex;align-items:center;background:var(--paper)}.slide.dark{background:var(--dark);color:#f7f2e7}.slide.warm{background:#f0eae0}.slide.light{background:#f9f7f2}.slide-content{position:relative;z-index:2;width:100%;max-width:1510px;margin:auto}.smallcap{font-size:clamp(10px,.78vw,14px);letter-spacing:.24em;text-transform:uppercase;font-weight:680;color:var(--orange);margin-bottom:2.6vh}.dark .smallcap{color:var(--orange2)}.large-title{font-weight:580;letter-spacing:-.045em;line-height:1.15;font-size:clamp(38px,4vw,75px);max-width:1320px}.mid-title{font-size:clamp(32px,3.35vw,60px)}.sublead{font-size:clamp(17px,1.3vw,24px);line-height:1.68;color:#4c504a;max-width:960px}.dark .sublead{color:#c3c8c0}.accent{color:var(--orange)}.dark .accent{color:var(--orange2)}.muted{color:var(--muted)}.thin-rule{height:1px;background:var(--line)}.dark .thin-rule{background:rgba(255,255,255,.23)}
+.kicker{font-weight:550;letter-spacing:-.02em;line-height:1.28;font-size:clamp(22px,2.15vw,38px)}.small{font-size:clamp(12px,.85vw,15px);color:var(--muted);line-height:1.75}.hero-claim{border-left:3px solid var(--orange);padding-left:22px;font-size:clamp(18px,1.45vw,28px);line-height:1.6;letter-spacing:-.025em;max-width:950px}
+/* nav */
+.topbar{position:fixed;z-index:50;top:0;left:0;right:0;padding:19px 3.5vw;display:flex;justify-content:space-between;align-items:center;pointer-events:none;mix-blend-mode:difference;color:white}.topbar>*{pointer-events:auto}.topbar .brand{font-size:12px;letter-spacing:.23em;font-weight:800}.topbar .top-title{font-size:10px;letter-spacing:.15em;font-weight:520;opacity:.8}.topbar .counter{font-size:11px;letter-spacing:.12em;font-variant-numeric:tabular-nums}.bottom-controls{position:fixed;z-index:60;left:3.5vw;right:3.5vw;bottom:2.4vh;display:flex;justify-content:space-between;align-items:center;pointer-events:none;color:#a2a096;mix-blend-mode:difference}.controls-left{display:flex;gap:10px;align-items:center}.ui-btn{pointer-events:auto;cursor:pointer;border:1px solid rgba(255,255,255,.26);color:white;background:rgba(0,0,0,.7);border-radius:100px;height:31px;min-width:31px;padding:0 11px;font-size:11px;display:inline-flex;align-items:center;justify-content:center}.ui-btn:hover{background:#e16738;border-color:#e16738}.ui-hint{font-size:10px;letter-spacing:.08em;color:#fff}.progress{position:fixed;z-index:70;bottom:0;left:0;width:10%;height:3px;background:var(--orange);transition:width .4s ease}
+/* COVER */
+.cover-slide{background:#eae5d9}.cover-slide:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 73% 54%,rgba(210,92,49,.12),transparent 37%);pointer-events:none}.cover-hero{font-size:clamp(100px,12vw,222px);letter-spacing:-.10em;font-weight:640;line-height:.98;margin:2vh 0 2.6vh -8px}.cover-strap{font-size:clamp(23px,2.7vw,48px);font-weight:550;letter-spacing:-.047em;max-width:900px;line-height:1.2}.cover-sub{font-size:clamp(15px,1.4vw,23px);color:#605e58;margin-top:3.6vh;max-width:730px}.cover-team{margin-top:8.5vh;padding-top:24px;border-top:1px solid #bbb4a5;font-size:clamp(19px,1.7vw,30px);font-weight:720;letter-spacing:.06em}.cover-graph{position:absolute;right:-2vw;top:12vh;width:41vw;height:72vh;opacity:.82;transform:rotate(-6deg)}.cover-graph path{fill:none;stroke:#db6c46;stroke-width:1.2;stroke-linecap:round}.cover-graph .heavy{stroke-width:4.2}.cover-graph circle{fill:#e06c42}
+/* PAGE 2 time */
+.epoch-modes{display:grid;grid-template-columns:1fr 80px 1fr;gap:2.7vw;margin:7vh 0 6vh;align-items:center}.epoch{border-top:1.5px solid rgba(21,22,20,.32);padding-top:2vh}.epoch b{font-size:clamp(27px,2.6vw,48px);font-weight:620;letter-spacing:-.055em;display:block}.epoch .epoch-tag{font-size:12px;color:var(--muted);letter-spacing:.16em;margin-bottom:18px}.epoch.next{border-color:var(--orange)}.epoch.next b{color:var(--orange)}.epoch-arrow{font-size:50px;color:var(--orange);text-align:center}.shift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3.7vw,70px);margin:4vh 0 7vh}.shift-grid .item{border-top:1px solid var(--line);padding-top:1.6vh}.shift-grid .n{color:var(--orange);font-size:12px;letter-spacing:.09em}.shift-grid .item h3{font-size:clamp(19px,1.55vw,30px);font-weight:630;margin:15px 0 10px}.shift-grid .item p{font-size:clamp(14px,1.02vw,18px);color:#696b64}
+/* X map */
+.x-flex{display:grid;grid-template-columns:1.13fr .87fr;gap:5.8vw;align-items:center;margin-top:4vh}.x-image{margin:0;position:relative;box-shadow:0 15px 55px rgba(35,32,25,.10)}.x-image img{width:100%;aspect-ratio:1.42/1;object-fit:cover;display:block;filter:saturate(.82)}.x-image figcaption{font-size:10px;color:#7c7b74;padding:8px 2px;letter-spacing:.04em}.x-text .little-rule{height:3px;width:42px;background:var(--orange);margin:0 0 24px}.x-text h3{font-size:clamp(27px,2.5vw,46px);font-weight:590;line-height:1.23;letter-spacing:-.04em}.x-text p{font-size:clamp(15px,1.1vw,20px);line-height:1.76;color:#5b5c55;margin-top:22px}.x-claim{margin-top:25px;padding:18px 22px;border-left:5px solid var(--orange);background:rgba(212,90,48,.075);font-size:clamp(27px,2.55vw,44px);font-weight:730;letter-spacing:-.045em;line-height:1.28;color:var(--orange)}
+/* TEAMS */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.7vw;margin-top:7.2vh}.team-card{padding:0 2vw 0 0;border-top:3px solid #9a968d}.team-card:last-child{border-color:var(--orange)}.team-en{font-size:clamp(48px,5.4vw,96px);font-weight:680;letter-spacing:-.075em;line-height:1.3}.team-cn{font-size:clamp(16px,1.3vw,25px);font-weight:580;margin:0 0 26px}.team-facts{padding-left:0;list-style:none}.team-facts li{font-size:clamp(15px,1.12vw,21px);line-height:1.7;padding:12px 0;border-top:1px solid var(--line)}.team-facts li span{color:var(--orange);font-size:12px;margin-right:12px;vertical-align:2px}.team-banner{margin-top:5.3vh;border-top:1px solid var(--line);padding-top:17px;display:flex;align-items:baseline;justify-content:space-between;gap:20px}.team-banner b{font-size:clamp(20px,1.7vw,32px);font-weight:580;letter-spacing:-.035em}.team-banner span{font-size:clamp(12px,.9vw,17px);color:var(--muted)}
+/* legacy */
+.slide.legacy-update .large-title{font-size:clamp(30px,2.85vw,53px)}
+.legacy-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:5vw;margin-top:5vh;align-items:center}.legacy-photo{position:relative;padding:24px;background:#fbfaf6;border:1px solid #d6d2c8}.legacy-photo img{display:block;width:100%;height:45vh;object-fit:contain}.legacy-photo figcaption{font-size:11px;color:var(--muted);margin-top:10px}.legacy-flow{display:grid;gap:16px}.legacy-step{display:grid;grid-template-columns:105px 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);align-items:start}.legacy-step label{font-size:11px;color:var(--orange);font-weight:680;letter-spacing:.12em;padding-top:6px}.legacy-step h3{font-size:clamp(20px,1.65vw,30px);font-weight:600;letter-spacing:-.035em}.legacy-step p{font-size:clamp(13px,.98vw,18px);color:#676860;margin-top:7px}.legacy-quote{font-size:clamp(19px,1.5vw,28px);font-weight:580;letter-spacing:-.03em;line-height:1.6;margin-top:23px}
+/* site */
+.site-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:5vw;align-items:center;margin:5vh 0}.site-left .big-number{font-size:clamp(72px,8vw,136px);font-weight:620;letter-spacing:-.065em;color:var(--orange);line-height:1}.site-left h3{font-size:clamp(24px,2.3vw,42px);line-height:1.3;letter-spacing:-.055em;margin-top:8px}.site-left p{font-size:clamp(15px,1.05vw,20px);color:#6d706a;margin-top:23px;line-height:1.85}.site-map{position:relative;background:#e5e6dc;overflow:hidden;height:47vh}.site-map>img{width:100%;height:100%;object-fit:cover;filter:saturate(.75)}.site-map-overlay{position:absolute;left:0;bottom:0;right:0;padding:30px;background:linear-gradient(0deg,rgba(19,20,16,.72),transparent);color:white;font-size:12px;letter-spacing:.13em}.site-track{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:4vh;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.track-item{padding:17px 14px 18px 0;border-right:1px solid var(--line)}.track-item:last-child{border:0;padding-left:20px}.track-item:nth-child(2){padding-left:20px}.track-item .track-num{font-size:11px;color:var(--orange)}.track-item h3{font-weight:570;font-size:clamp(22px,1.75vw,31px);letter-spacing:-.035em}.track-item p{font-size:clamp(12px,.85vw,16px);color:var(--muted)}
+/* three hearts */
+.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.1vw;margin-top:6vh}.heart-panel{min-height:45vh;border:1px solid var(--line);padding:2.5vw 2.4vw;display:flex;flex-direction:column;position:relative;background:#fbfaf7}.heart-panel:nth-child(2){background:#f1eadd}.heart-panel:nth-child(3){background:#e9ede5}.heart-index{font-size:13px;font-weight:650;letter-spacing:.16em;color:var(--orange)}.heart-panel h3{font-size:clamp(30px,3vw,55px);letter-spacing:-.055em;font-weight:590;margin-top:18px}.heart-panel .heart-role{font-size:clamp(13px,1.04vw,19px);color:#5d6863;line-height:1.5;margin-top:4px;font-weight:540}.heart-panel .heart-detail{font-size:clamp(14px,1.03vw,19px);line-height:1.82;color:#656961;margin-top:27px}.heart-panel .heart-question{font-size:clamp(17px,1.26vw,23px);line-height:1.5;font-weight:600;margin-top:auto;padding-top:29px;letter-spacing:-.02em}.footnote{margin-top:13px;font-size:11px;color:#87837b}
+/* five values */
+.value-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:1.7vw;margin-top:9vh}.value-card{padding:22px 14px 32px 0;border-top:2px solid #bbb6ac}.value-card:nth-child(1){border-color:var(--orange)}.value-card .n{font-size:clamp(37px,4vw,70px);font-weight:610;letter-spacing:-.08em;color:#d8d3c9;line-height:1.2}.value-card:nth-child(1) .n{color:var(--orange)}.value-card h3{font-weight:630;font-size:clamp(19px,1.58vw,29px);letter-spacing:-.045em;margin:24px 0 15px}.value-card p{font-size:clamp(13px,.93vw,18px);color:#62655d;line-height:1.86}.value-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;align-items:center;gap:3vw;margin-top:5vh}.value-bottom b{font-size:clamp(20px,2.1vw,38px);font-weight:580;letter-spacing:-.04em}.value-bottom span{font-size:14px;color:var(--muted)}
+/* questions */
+.questions .question-item{display:grid;grid-template-columns:130px 1fr 1.05fr;gap:2.1vw;border-top:1px solid rgba(255,255,255,.28);padding:3.2vh 0;align-items:baseline}.question-item:first-child{margin-top:7vh}.question-no{color:var(--orange2);font-size:clamp(23px,2.7vw,49px);letter-spacing:-.05em;font-weight:550}.question-item h3{font-size:clamp(23px,2vw,39px);font-weight:560;line-height:1.25;letter-spacing:-.04em}.question-item p{font-size:clamp(15px,1.12vw,21px);color:#b8b9ae;line-height:1.75}.questions-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.27);padding-top:18px;margin-top:1.4vh}.questions-foot span{font-size:12px;color:#94978e;letter-spacing:.14em}.questions-foot b{font-size:clamp(16px,1.2vw,23px);color:var(--orange2);font-weight:560}
+/* finish */
+.closing{background:#161713}.closing-photo{position:absolute;inset:0;opacity:.18;filter:saturate(.55) contrast(1.16);background-image:linear-gradient(90deg,#181914,rgba(24,25,20,.7)),url('data:image/omitted');background-size:cover;background-position:center}.closing::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 70%,rgba(211,91,49,.16),transparent 42%)}.close-label{font-size:12px;letter-spacing:.25em;color:var(--orange2);font-weight:700}.close-hero{font-size:clamp(56px,5.9vw,112px);line-height:1.13;letter-spacing:-.07em;font-weight:580;max-width:1370px;margin:4vh 0}.close-sub{font-size:clamp(17px,1.65vw,32px);font-weight:480;color:#c8ccc1;line-height:1.6;max-width:1080px}.close-terms{display:flex;gap:5vw;margin-top:8vh;padding-top:24px;border-top:1px solid rgba(255,255,255,.25)}.close-terms div{min-width:170px}.close-terms label{font-size:11px;color:var(--orange2);letter-spacing:.13em}.close-terms h3{font-size:clamp(18px,1.5vw,28px);font-weight:530;margin-top:10px}
+/* notes */
+.note-drawer{position:fixed;z-index:90;right:20px;bottom:63px;width:min(640px,calc(100vw - 40px));background:#f8f5ee;border:1px solid #a69f91;box-shadow:0 24px 70px rgba(0,0,0,.28);padding:25px 27px 24px;color:#252521;display:none}.note-drawer.visible{display:block}.note-drawer .head{font-size:12px;color:var(--orange);font-weight:690;letter-spacing:.12em;margin-bottom:12px}.note-drawer p{font-size:15px;line-height:1.85}.note-drawer .close-note{float:right;border:0;color:#777;background:none;cursor:pointer;font-size:18px}
+@media(max-width:960px){html{scroll-snap-type:y proximity}.slide{height:auto;min-height:100svh;padding:95px 7vw 90px;align-items:flex-start}.topbar .top-title{display:none}.cover-graph{right:-18vw;opacity:.28}.cover-hero{font-size:clamp(85px,18vw,130px)}.epoch-modes{grid-template-columns:1fr;gap:15px}.epoch-arrow{transform:rotate(90deg)}.shift-grid{grid-template-columns:1fr}.x-flex,.team-grid,.legacy-layout,.site-layout{grid-template-columns:1fr}.x-image img{max-height:40vh;object-fit:contain}.team-card{padding-top:20px}.team-banner{display:block}.legacy-photo img{height:36vh}.site-map{height:40vh}.three-grid{grid-template-columns:1fr}.heart-panel{min-height:0;padding:30px}.heart-panel .heart-question{padding-top:22px}.value-flow{grid-template-columns:1fr 1fr}.questions .question-item{grid-template-columns:85px 1fr}.question-item p{grid-column:2}.close-terms{flex-wrap:wrap}}
+@media(max-width:600px){.slide{padding:90px 24px 75px}.large-title{font-size:clamp(34px,9vw,49px)}.sublead{font-size:15px}.cover-strap{font-size:28px}.cover-sub{font-size:16px}.epoch b{font-size:31px}.x-text h3{font-size:27px}.team-en{font-size:64px}.site-track{grid-template-columns:1fr}.track-item,.track-item:nth-child(2),.track-item:last-child{padding-left:0;border-right:0;border-bottom:1px solid var(--line)}.track-item:last-child{border-bottom:0}.value-flow{grid-template-columns:1fr}.value-card h3{margin-top:8px}.value-card{padding-bottom:15px}.value-bottom{display:block}.questions .question-item{grid-template-columns:62px 1fr}.questions-foot{display:block}.questions-foot b{display:block;margin-top:12px}.close-hero{font-size:46px}.close-terms{gap:22px}.ui-hint{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress{transition:none}}
+@media print{@page{size:16in 9in;margin:0}html{scroll-snap-type:none!important}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.slide{height:9in!important;min-height:9in!important;width:16in!important;page-break-after:always;break-after:page;padding:1.0in 1.13in .75in!important}.topbar,.bottom-controls,.progress,.note-drawer{display:none!important}.large-title{font-size:53px!important}.cover-hero{font-size:140px!important}.cover-strap{font-size:37px!important}}
 
-.nav {
-  position: fixed; bottom: 28px; left: 0; right: 0;
-  display: flex; align-items: center; justify-content: center;
-  gap: 24px; z-index: 100;
-}
-.nav-dots { display: flex; gap: 8px; }
-.dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--fg-muted); cursor: pointer;
-  transition: background 0.25s, transform 0.25s;
-  border: none; padding: 0;
-}
-.dot.active { background: var(--accent); transform: scale(1.5); }
-.nav-btn {
-  background: none; border: 1px solid rgba(21,22,20,0.22);
-  color: var(--fg-muted); font-family: var(--sans);
-  font-size: 11px; letter-spacing: 0.1em;
-  padding: 7px 16px; cursor: pointer; border-radius: 100px;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
-}
-.nav-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
-.nav-btn:disabled { opacity: 0.25; cursor: default; }
-.slide-counter {
-  font-size: 11px; color: var(--fg-muted); letter-spacing: 0.12em;
-  font-variant-numeric: tabular-nums; width: 52px; text-align: center;
-}
-
-.eyebrow {
-  font-size: 10px; font-weight: 500; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--fg-muted);
-  margin-bottom: 22px; display: flex; align-items: center; gap: 12px;
-}
-.eyebrow::before { content: ''; width: 24px; height: 1px; background: currentColor; flex-shrink: 0; }
-
-.headline {
-  font-family: var(--serif); font-weight: 600;
-  font-size: clamp(24px, 3.6vw, 44px);
-  line-height: 1.25; text-wrap: balance;
-  margin: 0 0 20px; max-width: 820px;
-}
-.hl-accent  { color: var(--accent); }
-.hl-accent2 { color: var(--accent-2); }
-.hl-accent3 { color: var(--accent-3); }
-
-.body-text {
-  font-size: clamp(13px, 1.35vw, 16px);
-  line-height: 1.85; color: var(--fg-sub); max-width: 560px;
-}
-.body-text strong { font-weight: 500; color: var(--fg); }
-
-.rule { width: 40px; height: 1px; background: var(--accent); margin-bottom: 22px; }
-
-.stat-row { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
-.stat-item { display: flex; flex-direction: column; gap: 4px; }
-.stat-num {
-  font-family: var(--serif); font-size: clamp(26px, 3.4vw, 40px);
-  font-weight: 300; color: var(--fg); line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-.stat-num span { font-size: 0.55em; color: var(--fg-sub); }
-.stat-label { font-size: 11px; color: var(--fg-muted); letter-spacing: 0.1em; }
-
-.split { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 8px; max-width: 760px; }
-@media (max-width: 600px) { .split { grid-template-columns: 1fr; gap: 20px; } }
-.split-col-label {
-  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--fg-muted); margin-bottom: 10px;
-}
-.split-col-text { font-size: clamp(13px, 1.3vw, 15px); line-height: 1.85; color: var(--fg-sub); }
-.split-col-text strong { color: var(--fg); font-weight: 500; }
-
-.callout {
-  border-left: 3px solid var(--accent-3);
-  padding: 16px 20px; background: rgba(101,115,91,0.07);
-  margin-top: 22px; max-width: 520px; border-radius: 0 2px 2px 0;
-}
-.callout p { margin: 0; font-size: clamp(13px, 1.3vw, 15px); line-height: 1.8; color: var(--fg-sub); }
-.callout p strong { color: var(--fg); font-weight: 500; }
-
-.tension { display: flex; align-items: flex-start; gap: 18px; margin-top: 8px; max-width: 640px; }
-.tension-side { flex: 1; min-width: 0; }
-.tension-divider { width: 1px; background: var(--rule); align-self: stretch; flex-shrink: 0; margin-top: 4px; }
-.tension-label {
-  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 10px;
-}
-.tension-text { font-size: clamp(13px, 1.3vw, 15px); line-height: 1.8; color: var(--fg-sub); }
-.tension-text strong { color: var(--fg); font-weight: 500; }
-
-.closing-thesis {
-  font-family: var(--serif);
-  font-size: clamp(16px, 2.1vw, 24px);
-  line-height: 1.7; color: var(--fg-sub); max-width: 720px; margin-top: 8px;
-}
-.closing-thesis strong { color: var(--fg); font-weight: 600; }
-.challenge-bar {
-  margin-top: 32px; padding: 20px 24px;
-  border-left: 5px solid var(--accent);
-  background: rgba(212,90,48,0.07);
-  max-width: 640px; border-radius: 0 2px 2px 0;
-}
-.challenge-bar p { margin: 0; font-size: clamp(13px, 1.3vw, 15px); line-height: 1.7; color: var(--fg-sub); }
-.challenge-bar p strong { color: var(--accent); font-weight: 500; }
-
-.progress-line {
-  position: fixed; top: 0; left: 0; height: 2px;
-  background: var(--accent); transition: width 0.4s ease; z-index: 200;
-}
-.key-hint {
-  position: fixed; top: 18px; right: 24px;
-  font-size: 10px; color: var(--fg-muted); letter-spacing: 0.12em;
-  font-weight: 500; text-transform: uppercase;
-  opacity: 0; animation: fadein 1s 2s forwards;
-}
-@keyframes fadein { to { opacity: 1; } }
-@media (prefers-reduced-motion: reduce) {
-  .slide { transition: none; } .dot { transition: none; }
-  .key-hint { animation: none; opacity: 1; }
-}
-
-/* ── Two-column visual slides ── */
-.slide-split {
-  display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.15fr);
-  gap: clamp(24px, 3vw, 48px);
-  align-items: center;
-  height: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 100%;
-}
-.slide-split .col-text { min-width: 0; }
-.slide-split .col-visual {
-  min-width: 0; display: flex; flex-direction: column;
-  justify-content: center; align-items: stretch; gap: 10px;
-  max-height: calc(100vh - 140px);
-}
-@media (max-width: 860px) {
-  .slide-split { grid-template-columns: 1fr; overflow-y: auto; }
-  .slide-split .col-visual { max-height: none; }
-}
-
-/* Chart card */
-.chart-card {
-  background: var(--bg-soft);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 14px 16px 10px;
-  box-shadow: 0 8px 28px rgba(21,22,20,0.06);
-}
-.chart-card h3 {
-  margin: 0 0 8px; font-family: var(--serif); font-weight: 600;
-  font-size: clamp(14px, 1.4vw, 17px); color: var(--fg); text-align: center;
-}
-.chart-card svg { width: 100%; height: auto; display: block; }
-.chart-phases {
-  display: flex; justify-content: space-between; gap: 6px;
-  margin: 4px 2% 0; font-size: 9px; color: var(--fg-muted); letter-spacing: 0.04em;
-}
-.chart-phases span {
-  flex: 1; text-align: center; padding: 3px 4px;
-  background: rgba(21,22,20,0.06); border-radius: 2px;
-}
-
-/* AI diagrams */
-.ai-diagrams {
-  display: flex; flex-direction: column; gap: 18px;
-  background: var(--bg-soft); border: 1px solid var(--rule);
-  border-radius: 6px; padding: 16px 18px 14px;
-}
-.ai-diagrams svg { width: 100%; height: auto; display: block; }
-
-/* Collage */
-.collage {
-  display: grid; gap: 8px;
-  grid-template-columns: 1.2fr 1fr; grid-template-rows: auto auto;
-}
-.collage .tile {
-  position: relative; overflow: hidden; border-radius: 4px;
-  background: #ddd; border: 1px solid var(--rule);
-}
-.collage .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.collage .tile.wide { grid-column: 1 / -1; aspect-ratio: 16/9; max-height: 38vh; }
-.collage .tile.half { aspect-ratio: 4/3; max-height: 22vh; }
-.collage .cap {
-  font-size: 10px; color: var(--fg-muted); letter-spacing: 0.04em;
-  line-height: 1.4; margin-top: 2px;
-}
-.collage-caps { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.collage-caps .cap:first-child { grid-column: 1 / -1; }
-
-/* Talent collage */
-.talent-grid {
-  display: grid; grid-template-columns: 1fr 1.15fr; gap: 8px;
-  align-items: stretch;
-}
-.talent-grid .stack { display: flex; flex-direction: column; gap: 8px; min-height: 0; }
-.talent-grid .tile {
-  overflow: hidden; border-radius: 4px; border: 1px solid var(--rule);
-  background: #222; flex: 1; min-height: 0;
-}
-.talent-grid .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.talent-grid .tile.tall { min-height: 42vh; max-height: 56vh; }
-
-/* Migration map panel */
-.map-panel {
-  position: relative; border-radius: 6px; overflow: hidden;
-  background: #1a1a1c; border: 1px solid rgba(21,22,20,0.2);
-  aspect-ratio: 1 / 0.95; max-height: calc(100vh - 150px);
-}
-.map-panel img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.92; }
-.map-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,12,0.15) 0%, rgba(10,10,12,0.55) 70%, rgba(10,10,12,0.82) 100%);
-  pointer-events: none;
-}
-.map-stats {
-  position: absolute; top: 14px; right: 14px;
-  display: flex; flex-direction: column; gap: 10px; z-index: 2;
-}
-.map-stat {
-  color: #fff; text-align: left;
-}
-.map-stat .n {
-  font-family: var(--serif); font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 300; line-height: 1; color: #fff;
-}
-.map-stat .l {
-  font-size: 10px; color: rgba(255,255,255,0.72); margin-top: 2px;
-  letter-spacing: 0.04em; max-width: 140px; line-height: 1.35;
-}
-.map-foot {
-  position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2;
-  color: #fff;
-}
-.map-foot h4 {
-  margin: 0 0 6px; font-family: var(--serif); font-weight: 600;
-  font-size: clamp(14px, 1.5vw, 18px);
-}
-.map-foot p { margin: 0; font-size: 11px; color: rgba(255,255,255,0.75); line-height: 1.5; max-width: 70%; }
-.south-badge {
-  position: absolute; right: 14px; bottom: 14px; z-index: 3;
-  background: rgba(12,12,14,0.88); border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 6px; padding: 8px 10px; color: #fff; font-size: 9px; line-height: 1.45;
-  max-width: 130px;
-}
-.south-badge strong { display: block; font-size: 11px; margin-bottom: 3px; letter-spacing: 0.06em; }
-
-.aerial-frame {
-  border-radius: 6px; overflow: hidden; border: 1px solid var(--rule);
-  box-shadow: 0 10px 32px rgba(21,22,20,0.08);
-  max-height: calc(100vh - 160px);
-}
-.aerial-frame img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: calc(100vh - 160px); }
-
-.closing-center {
-  max-width: 820px; margin: 0 auto; width: 100%;
-}
-.brief-meta {
-  font-size: 10px; letter-spacing: 0.14em; color: var(--fg-muted);
-  text-transform: uppercase; margin-bottom: 18px;
-  display: flex; justify-content: space-between; gap: 12px; max-width: 100%;
-}
-
-/* ── Bridge cinematic title ── */
-.slide-bridge {
-  padding: 0 !important;
-  justify-content: center;
-  align-items: center;
-  background: #0a0a0c;
-}
-.bridge-bg {
-  position: absolute; inset: 0;
-  background: #0a0a0c center/cover no-repeat;
-  z-index: 0;
-}
-.bridge-bg::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.72) 100%);
-}
-.bridge-content {
-  position: relative; z-index: 2;
-  text-align: center;
-  color: #fff;
-  padding: 0 6vw;
-  max-width: 1100px;
-}
-.bridge-kicker {
-  font-size: clamp(13px, 1.4vw, 16px);
-  letter-spacing: 0.28em;
-  font-weight: 400;
-  color: rgba(255,255,255,0.78);
-  margin-bottom: 22px;
-}
-.bridge-title {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: clamp(20px, 2.6vw, 32px);
-  line-height: 1.55;
-  letter-spacing: 0.06em;
-  margin: 0 0 28px;
-  text-wrap: balance;
-}
-.bridge-rule {
-  width: 40px; height: 1px;
-  background: var(--accent);
-  margin: 0 auto 28px;
-}
-.bridge-slogan {
-  font-size: clamp(14px, 1.5vw, 18px);
-  letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.88);
-  font-weight: 300;
-}
-.bridge-meta {
-  position: absolute; top: 20px; left: 28px; right: 28px;
-  z-index: 3;
-  display: flex; justify-content: space-between;
-  font-size: 10px; letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.45);
-  text-transform: uppercase;
-}
-
-/* ── Overview three districts ── */
-.slide-overview {
-  padding: 28px 4vw 88px !important;
-  justify-content: stretch;
-}
-.ov-wrap {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 10px;
-  height: 100%;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.ov-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-  text-align: center;
-  align-items: end;
-  width: min(92%, 980px);
-  margin: 0 auto;
-}
-.ov-district {
-  font-family: var(--serif);
-  font-size: clamp(14px, 1.5vw, 18px);
-  letter-spacing: 0.06em;
-  color: var(--fg);
-  line-height: 1.3;
-}
-.ov-en {
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  color: var(--fg-muted);
-  margin-top: 4px;
-  text-transform: uppercase;
-}
-.ov-claim {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: clamp(12px, 1.25vw, 15px);
-  letter-spacing: 0.04em;
-  margin-top: 8px;
-  line-height: 1.35;
-  color: var(--fg);
-}
-.ov-claim-en {
-  font-size: 10px;
-  color: var(--fg-sub);
-  margin-top: 4px;
-  letter-spacing: 0.02em;
-  line-height: 1.35;
-}
-.ov-map {
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.ov-map img {
-  width: 100%;
-  height: 100%;
-  max-height: calc(100vh - 280px);
-  object-fit: contain;
-  display: block;
-}
-.ov-bottom { text-align: center; padding-top: 4px; }
-.ov-footer-cn {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: clamp(18px, 2.2vw, 28px);
-  letter-spacing: 0.18em;
-  line-height: 1.3;
-}
-.ov-footer-en {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--fg-muted);
-  margin-top: 6px;
-}
-
-/* ── District detail pages ── */
-.slide-district {
-  padding: 0 !important;
-  display: block !important;
-}
-.district-layout {
-  display: grid;
-  grid-template-columns: 65% 35%;
-  height: 100%;
-  width: 100%;
-}
-.map-pane {
-  position: relative;
-  overflow: hidden;
-  background: #1a1a1a;
-  height: 100%;
-}
-.map-pane img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-.map-pane::after {
-  content: "";
-  position: absolute; top: 0; right: 0; bottom: 0;
-  width: 7%;
-  min-width: 48px; max-width: 96px;
-  pointer-events: none; z-index: 3;
-  background: linear-gradient(90deg,
-    rgba(246,243,237,0) 0%,
-    rgba(246,243,237,0.35) 42%,
-    rgba(246,243,237,0.82) 78%,
-    rgba(246,243,237,1) 100%);
-}
-.side-panel {
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: -12px 0 28px rgba(0,0,0,.08);
-  z-index: 2;
-  position: relative;
-  padding-bottom: 48px;
-}
-.side-inner {
-  width: 100%;
-  padding: 2rem 1.6rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.side-inner .num {
-  font-family: var(--serif);
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 300;
-  line-height: 1;
-  color: var(--fg);
-}
-.side-inner .role {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: clamp(32px, 4vw, 52px);
-  line-height: 1.15;
-  margin-top: 0.45em;
-  letter-spacing: 0.12em;
-  color: var(--fg);
-}
-.side-inner .district {
-  font-family: var(--serif);
-  font-size: clamp(16px, 1.8vw, 22px);
-  margin-top: 0.55em;
-  letter-spacing: 0.08em;
-  line-height: 1.3;
-}
-.side-inner .en {
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  color: var(--fg-muted);
-  margin-top: 0.4em;
-  text-transform: uppercase;
-}
-.side-inner .taglines {
-  margin-top: 2.2em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.side-inner .taglines div {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: clamp(16px, 1.8vw, 22px);
-  letter-spacing: 0.1em;
-  line-height: 1.35;
-  color: var(--fg);
-}
-.district-eyebrow {
-  position: absolute;
-  top: 18px; left: 24px;
-  z-index: 5;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  color: rgba(255,255,255,0.75);
-  display: flex; align-items: center; gap: 12px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-}
-.district-eyebrow::before {
-  content: ''; width: 24px; height: 1px; background: currentColor;
-}
-@media (max-width: 860px) {
-  .district-layout { grid-template-columns: 1fr; grid-template-rows: 55% 45%; }
-  .map-pane::after {
-    top: auto; left: 0; right: 0; bottom: 0; width: 100%; height: 12%;
-    background: linear-gradient(180deg, rgba(246,243,237,0), var(--bg));
-  }
-  .ov-top { grid-template-columns: 1fr; gap: 12px; }
+/* content layouts for 12-page deck */
+.slide-content.full{max-width:1510px}
+.split-layout{display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,1.15fr);gap:clamp(24px,3.6vw,56px);align-items:center;width:100%}
+.split-layout .col-text{min-width:0}
+.split-layout .col-visual{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:10px;max-height:calc(100svh - 18vh)}
+.stat-row{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
+.stat-item{display:flex;flex-direction:column;gap:4px}
+.stat-num{font-size:clamp(28px,3.4vw,44px);font-weight:580;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stat-num span{font-size:.5em;color:var(--muted);font-weight:500}
+.stat-label{font-size:11px;color:var(--muted);letter-spacing:.1em}
+.chart-card{background:#fbfaf6;border:1px solid var(--line);border-radius:4px;padding:14px 16px 10px;box-shadow:0 12px 40px rgba(35,32,25,.07)}
+.chart-card h3{margin:0 0 8px;font-weight:600;font-size:clamp(14px,1.35vw,17px);text-align:center;letter-spacing:-.02em}
+.chart-card svg{width:100%;height:auto;display:block}
+.ai-diagrams{display:flex;flex-direction:column;gap:18px;background:#fbfaf6;border:1px solid var(--line);border-radius:4px;padding:16px 18px 14px}
+.ai-diagrams svg{width:100%;height:auto;display:block}
+.two-points{display:grid;gap:22px;margin-top:8px}
+.two-points .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.two-points p{font-size:clamp(14px,1.05vw,18px);line-height:1.8;color:#5b5c55;margin:0}
+.collage{display:grid;gap:8px;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto}
+.collage .tile{position:relative;overflow:hidden;border-radius:3px;background:#ddd;border:1px solid var(--line)}
+.collage .tile img{width:100%;height:100%;object-fit:cover;display:block}
+.collage .tile.wide{grid-column:1/-1;aspect-ratio:16/9;max-height:36vh}
+.collage .tile.half{aspect-ratio:4/3;max-height:20vh}
+.collage-caps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.collage-caps .cap{font-size:10px;color:var(--muted);letter-spacing:.04em;line-height:1.4}
+.collage-caps .cap:first-child{grid-column:1/-1}
+.brief-meta{font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-bottom:14px;display:flex;justify-content:space-between;gap:12px}
+.callout{border-left:3px solid var(--forest);padding:16px 20px;background:rgba(101,115,91,.07);margin-top:22px;max-width:560px}
+.callout.orange{border-left-color:var(--orange);background:rgba(212,90,48,.07)}
+.callout p{margin:0;font-size:clamp(13px,1.05vw,17px);line-height:1.8;color:#5b5c55}
+.callout strong{color:var(--ink);font-weight:600}
+.map-panel{position:relative;border-radius:4px;overflow:hidden;background:#1a1a1c;border:1px solid rgba(21,22,20,.2);aspect-ratio:1/.95;max-height:calc(100svh - 20vh)}
+.map-panel img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.map-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.15) 0%,rgba(10,10,12,.55) 70%,rgba(10,10,12,.82) 100%);pointer-events:none}
+.map-stats{position:absolute;top:14px;right:14px;display:flex;flex-direction:column;gap:10px;z-index:2}
+.map-stat{color:#fff}
+.map-stat .n{font-size:clamp(28px,3.2vw,42px);font-weight:580;letter-spacing:-.05em;line-height:1}
+.map-stat .l{font-size:10px;color:rgba(255,255,255,.72);margin-top:2px;letter-spacing:.04em;max-width:140px;line-height:1.35}
+.map-foot{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;color:#fff}
+.map-foot h4{margin:0 0 6px;font-weight:600;font-size:clamp(14px,1.5vw,18px);letter-spacing:-.02em}
+.map-foot p{margin:0;font-size:11px;color:rgba(255,255,255,.75);line-height:1.5;max-width:70%}
+.south-badge{position:absolute;right:14px;bottom:14px;z-index:3;background:rgba(12,12,14,.88);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:8px 10px;color:#fff;font-size:9px;line-height:1.45;max-width:130px}
+.south-badge strong{display:block;font-size:11px;margin-bottom:3px;letter-spacing:.06em}
+.talent-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:8px;align-items:stretch}
+.talent-grid .stack{display:flex;flex-direction:column;gap:8px;min-height:0}
+.talent-grid .tile{overflow:hidden;border-radius:3px;border:1px solid var(--line);background:#222;flex:1;min-height:0}
+.talent-grid .tile img{width:100%;height:100%;object-fit:cover;display:block}
+.talent-grid .tile.tall{min-height:42vh;max-height:56vh}
+.aerial-frame{border-radius:4px;overflow:hidden;border:1px solid var(--line);box-shadow:0 12px 40px rgba(35,32,25,.08);max-height:calc(100svh - 20vh)}
+.aerial-frame img{width:100%;height:100%;object-fit:cover;display:block;max-height:calc(100svh - 20vh)}
+.tension{display:flex;align-items:flex-start;gap:18px;margin-top:8px;max-width:640px}
+.tension-side{flex:1;min-width:0}
+.tension-divider{width:1px;background:var(--line);align-self:stretch;flex-shrink:0;margin-top:4px}
+.tension-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;font-weight:650}
+.tension-text{font-size:clamp(14px,1.05vw,17px);line-height:1.8;color:#5b5c55}
+.tension-text strong{color:var(--ink);font-weight:600}
+.closing-center{max-width:900px}
+.closing-thesis{font-size:clamp(17px,1.55vw,26px);line-height:1.7;color:#4c504a;margin-top:8px;font-weight:480;letter-spacing:-.02em}
+.closing-thesis strong{color:var(--ink);font-weight:600}
+.challenge-bar{margin-top:32px;padding:20px 24px;border-left:5px solid var(--orange);background:rgba(212,90,48,.075);max-width:720px}
+.challenge-bar p{margin:0;font-size:clamp(14px,1.1vw,18px);line-height:1.75;color:#5b5c55}
+.challenge-bar strong{color:var(--orange);font-weight:600}
+/* bridge dark */
+.slide.bridge{padding:0;background:var(--dark)}
+.bridge-bg{position:absolute;inset:0;background:#0a0a0c center/cover no-repeat;z-index:0}
+.bridge-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.25) 0%,rgba(0,0,0,.55) 70%,rgba(0,0,0,.72) 100%)}
+.bridge-content{position:relative;z-index:2;text-align:center;color:#f7f2e7;padding:0 6vw;max-width:1100px;margin:auto}
+.bridge-kicker{font-size:clamp(12px,1.2vw,14px);letter-spacing:.28em;font-weight:650;color:var(--orange2);margin-bottom:22px;text-transform:uppercase}
+.bridge-title{font-weight:580;font-size:clamp(22px,2.7vw,36px);line-height:1.5;letter-spacing:-.03em;margin:0 0 28px}
+.bridge-rule{width:42px;height:3px;background:var(--orange);margin:0 auto 28px}
+.bridge-slogan{font-size:clamp(15px,1.45vw,20px);letter-spacing:.08em;color:#c3c8c0;font-weight:480}
+.bridge-meta{position:absolute;top:7.5vh;left:7.4vw;right:7.4vw;z-index:3;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);text-transform:uppercase;pointer-events:none}
+/* overview */
+.ov-wrap{display:grid;grid-template-rows:auto 1fr auto;gap:14px;width:100%;height:calc(100svh - 16vh);max-width:1400px;margin:auto}
+.ov-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;text-align:center;align-items:end;width:min(96%,1100px);margin:0 auto}
+.ov-district{font-size:clamp(15px,1.5vw,20px);letter-spacing:-.02em;font-weight:600;color:var(--ink)}
+.ov-en{font-size:10px;letter-spacing:.16em;color:var(--muted);margin-top:4px;text-transform:uppercase}
+.ov-claim{font-weight:600;font-size:clamp(13px,1.25vw,17px);letter-spacing:-.02em;margin-top:10px;line-height:1.35;color:var(--orange)}
+.ov-claim-en{font-size:10px;color:#696b64;margin-top:4px;letter-spacing:.02em;line-height:1.35}
+.ov-map{min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:3px}
+.ov-map img{width:100%;height:100%;max-height:calc(100svh - 38vh);object-fit:contain;display:block}
+.ov-bottom{text-align:center;padding-top:4px}
+.ov-footer-cn{font-weight:600;font-size:clamp(20px,2.2vw,32px);letter-spacing:-.02em;line-height:1.3}
+.ov-footer-en{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-top:6px}
+/* district */
+.slide.district{padding:0}
+.district-layout{display:grid;grid-template-columns:65% 35%;height:100svh;width:100%}
+.map-pane{position:relative;overflow:hidden;background:#1a1a1a;height:100%}
+.map-pane img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.map-pane:after{content:"";position:absolute;top:0;right:0;bottom:0;width:7%;min-width:48px;max-width:96px;pointer-events:none;z-index:3;background:linear-gradient(90deg,rgba(246,243,237,0) 0%,rgba(246,243,237,.35) 42%,rgba(246,243,237,.82) 78%,rgba(246,243,237,1) 100%)}
+.side-panel{background:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:-12px 0 28px rgba(0,0,0,.08);z-index:2;position:relative;padding-bottom:48px}
+.side-inner{width:100%;padding:2rem 1.6rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.side-inner .num{font-size:clamp(44px,5vw,72px);font-weight:580;letter-spacing:-.06em;line-height:1;color:var(--orange)}
+.side-inner .role{font-weight:600;font-size:clamp(34px,4vw,56px);line-height:1.15;margin-top:.4em;letter-spacing:-.04em;color:var(--ink)}
+.side-inner .district-name{font-size:clamp(16px,1.7vw,22px);margin-top:.55em;letter-spacing:-.02em;line-height:1.3;font-weight:550}
+.side-inner .en{font-size:11px;letter-spacing:.16em;color:var(--muted);margin-top:.4em;text-transform:uppercase}
+.side-inner .taglines{margin-top:2.2em;display:flex;flex-direction:column;gap:.55em}
+.side-inner .taglines div{font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-.02em;line-height:1.35;color:var(--ink)}
+.district-eyebrow{position:absolute;top:18px;left:24px;z-index:5;font-size:10px;font-weight:650;letter-spacing:.22em;color:rgba(255,255,255,.78);text-transform:uppercase;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+@media(max-width:960px){
+  .split-layout{grid-template-columns:1fr;overflow-y:auto;max-height:none}
+  .split-layout .col-visual{max-height:none}
+  .ov-top{grid-template-columns:1fr;gap:12px}
+  .district-layout{grid-template-columns:1fr;grid-template-rows:55% 45%}
+  .map-pane:after{top:auto;left:0;right:0;bottom:0;width:100%;height:12%;background:linear-gradient(180deg,rgba(246,243,237,0),var(--paper))}
+  .ov-wrap{height:auto}
+}
+@media(max-width:600px){
+  .stat-row{gap:18px}
+  .talent-grid{grid-template-columns:1fr}
+  .talent-grid .tile.tall{min-height:28vh}
 }
 
 </style>
 </head>
 <body>
-<div class="progress-line" id="prog"></div>
-<div class="key-hint">← → 或点击导航</div>
+<header class="topbar"><span class="brand">TEKUMA&nbsp; × &nbsp;MLA+</span><span class="top-title">创业路“一轴三心” · 价值判断与三区结构</span><span class="counter" id="counter">01 / 12</span></header>
+<main class="slides" id="slides">
 
-<div class="deck" id="deck">
-
-  <!-- ── 01 Inclusive Shenzhen ── -->
-  <div class="slide active" data-index="0">
-    <div class="slide-split">
+<!-- 01 Inclusive Shenzhen -->
+<section class="slide light" data-note="深圳的创新根基是包容与年轻。用人口预测图说明这座城市把每一代年轻人留下来的重要性，以及创新主体多样化对生态可持续的意义。">
+  <div class="slide-content">
+    <p class="smallcap">01 / 价值判断 · INCLUSIVE CITY</p>
+    <div class="split-layout">
       <div class="col-text">
-        <div class="eyebrow">创业路·价值判断　01 / 07</div>
-        <h1 class="headline">深圳是一座<span class="hl-accent">包容的城市</span></h1>
-        <div class="rule"></div>
-        <p class="body-text">
+        <h2 class="large-title mid-title">深圳是一座<span class="accent">包容的城市</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead" style="max-width:520px">
           留住每一代年轻人，是深圳创新之城<strong>立足之本</strong>。<br>
           无论是一座城市还是一个街区，<strong>创新主体的多样化</strong>是创新生态可持续生长的关键。
         </p>
         <div class="stat-row">
-          <div class="stat-item">
-            <div class="stat-num">40<span>年</span></div>
-            <div class="stat-label">从渔村到全球科技城</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">1750<span>万</span></div>
-            <div class="stat-label">常住人口，以年轻人为主体</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">35<span>岁</span></div>
-            <div class="stat-label">全市平均年龄</div>
-          </div>
+          <div class="stat-item"><div class="stat-num">40<span>年</span></div><div class="stat-label">从渔村到全球科技城</div></div>
+          <div class="stat-item"><div class="stat-num">1750<span>万</span></div><div class="stat-label">常住人口，以年轻人为主体</div></div>
+          <div class="stat-item"><div class="stat-num">35<span>岁</span></div><div class="stat-label">全市平均年龄</div></div>
         </div>
       </div>
       <div class="col-visual">
-        <div class="chart-card" aria-label="深圳人口发展趋势预测矢量图">
+<div class="chart-card" aria-label="深圳人口发展趋势预测矢量图">
           <h3>深圳人口发展趋势预测</h3>
           <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img">
             <title>深圳人口发展趋势预测（万人，1990–2100）</title>
@@ -729,15 +289,17 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 02 AI rewriting ── -->
-  <div class="slide" data-index="1">
-    <div class="slide-split">
+<!-- 02 AI rewriting -->
+<section class="slide warm" data-note="AI降低门槛，创新从大机构主导转向分布式个体网络。用建筑与组织尺度示意这个结构性转变。">
+  <div class="slide-content">
+    <p class="smallcap">02 / 价值判断 · AI UNIT</p>
+    <div class="split-layout">
       <div class="col-text">
-        <div class="eyebrow">创业路·价值判断　02 / 07</div>
-        <h1 class="headline"><span class="hl-accent2">AI</span> 正在重写创新的基本单元</h1>
-        <div class="rule"></div>
-        <p class="body-text">
+        <h2 class="large-title mid-title"><span class="accent" style="color:var(--sea)">AI</span> 正在重写创新的基本单元</h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead" style="max-width:520px">
           AI降低了知识获取、工具使用、创造能力与组织成本的门槛。<br>
           <strong>更多创新活动从小型团队与个人开始。</strong><br><br>
           这不是趋势预测，而是正在发生的结构性转变——<br>
@@ -745,7 +307,7 @@ html, body {
         </p>
       </div>
       <div class="col-visual">
-        <div class="ai-diagrams" aria-label="传统大型公司与AI原生公司示意">
+<div class="ai-diagrams" aria-label="传统大型公司与AI原生公司示意">
           <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" role="img">
             <title>建筑尺度：从高层总部到低层分布式单元</title>
             <!-- Traditional tall buildings -->
@@ -817,28 +379,24 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 03 Streets & third spaces ── -->
-  <div class="slide" data-index="2">
-    <div class="slide-split">
+<!-- 03 Streets -->
+<section class="slide light" data-note="创新发生在街巷与第三空间。低成本、可负担的空间是个体创新者的基础设施。">
+  <div class="slide-content">
+    <p class="smallcap">03 / 价值判断 · THIRD SPACE</p>
+    <div class="split-layout">
       <div class="col-text">
-        <div class="eyebrow">创业路·价值判断　03 / 07</div>
-        <h1 class="headline">街巷与第三空间，成为<span class="hl-accent">创新发生地</span></h1>
-        <div class="rule"></div>
-        <div class="split" style="max-width:none;grid-template-columns:1fr;gap:18px">
-          <div class="split-col">
-            <div class="split-col-label">空间功能的转变</div>
-            <div class="split-col-text">
-              创新不再只发生在写字楼与实验室。<br>
-              咖啡馆、巷道、联合办公——<strong>非正式场所</strong>正成为新的孵化土壤。
-            </div>
+        <h2 class="large-title mid-title">街巷与第三空间，成为<span class="accent">创新发生地</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <div class="two-points">
+          <div>
+            <div class="label">空间功能的转变</div>
+            <p>创新不再只发生在写字楼与实验室。<br>咖啡馆、巷道、联合办公——<strong>非正式场所</strong>正成为新的孵化土壤。</p>
           </div>
-          <div class="split-col">
-            <div class="split-col-label">低成本空间的战略价值</div>
-            <div class="split-col-text">
-              对个体创新者而言，<strong>可负担的空间就是基础设施</strong>。<br>
-              它决定了谁能留下来，谁能开始尝试。
-            </div>
+          <div>
+            <div class="label">低成本空间的战略价值</div>
+            <p>对个体创新者而言，<strong>可负担的空间就是基础设施</strong>。<br>它决定了谁能留下来，谁能开始尝试。</p>
           </div>
         </div>
       </div>
@@ -856,26 +414,24 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 04 SF innovation migration ── -->
-  <div class="slide" data-index="3">
-    <div class="slide-split">
+<!-- 04 SF migration -->
+<section class="slide warm" data-note="旧金山市区吸纳大量 AI 投资与初创团队，从硅谷南湾迁入可步行的城市肌理。">
+  <div class="slide-content">
+    <p class="smallcap">04 / 价值判断 · SF MIGRATION</p>
+    <div class="split-layout">
       <div class="col-text">
         <div class="brief-meta"><span>TEKUMA · company brief · confidential</span><span>MAY 2025</span></div>
-        <div class="eyebrow">创业路·价值判断　04 / 07</div>
-        <h1 class="headline">创新活力正从硅谷<br>迁入<span class="hl-accent">旧金山</span></h1>
-        <div class="rule"></div>
-        <p class="body-text">
+        <h2 class="large-title mid-title">创新活力正从硅谷<br>迁入<span class="accent">旧金山</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead" style="max-width:520px">
           Anthropic、OpenAI 等生态圈在市区街巷密集生长。<br>
           人与人之间<strong>高频碰撞的社群网络</strong>，正吸引越来越多的创新主体加入——
           从南湾大厂据点，转向可步行、可偶遇的城市肌理。
         </p>
-        <div class="callout" style="border-left-color:var(--accent);background:rgba(212,90,48,0.07)">
-          <p>
-            <strong>50%</strong> 吸纳全美 AI 风险投资　·　
-            <strong>60%</strong> 占全美 AI 融资总额　·　
-            <strong>33%</strong> 硅谷 AI 初创总部或核心团队迁入
-          </p>
+        <div class="callout orange">
+          <p><strong>50%</strong> 吸纳全美 AI 风险投资　·　<strong>60%</strong> 占全美 AI 融资总额　·　<strong>33%</strong> 硅谷 AI 初创总部或核心团队迁入</p>
         </div>
       </div>
       <div class="col-visual">
@@ -900,15 +456,17 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 05 New-gen talent ── -->
-  <div class="slide" data-index="4">
-    <div class="slide-split">
+<!-- 05 Talent -->
+<section class="slide light" data-note="新一代人才需要工作之外的生活品质。山海资源是高密度城市留才的稀缺因素。">
+  <div class="slide-content">
+    <p class="smallcap">05 / 价值判断 · NEXT GEN</p>
+    <div class="split-layout">
       <div class="col-text">
-        <div class="eyebrow">创业路·价值判断　05 / 07</div>
-        <h1 class="headline">新一代产业人才，需要的不只是<span class="hl-accent3">工作机会</span></h1>
-        <div class="rule"></div>
-        <p class="body-text">
+        <h2 class="large-title mid-title">新一代产业人才，需要的不只是<span class="accent" style="color:var(--forest)">工作机会</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead" style="max-width:520px">
           在丰富物质与精神世界中成长起来的新一代，<br>
           他们对创业和工作之外的生活有着同等重要的追求。
         </p>
@@ -931,14 +489,16 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 06 Unique endowments ── -->
-  <div class="slide" data-index="5">
-    <div class="slide-split">
+<!-- 06 Endowments -->
+<section class="slide warm" data-note="创业路的独特禀赋：产业基因与海山城生活资源在同一轴线上并存。">
+  <div class="slide-content">
+    <p class="smallcap">06 / 价值判断 · ENDOWMENT</p>
+    <div class="split-layout">
       <div class="col-text">
-        <div class="eyebrow">创业路·价值判断　06 / 07</div>
-        <h1 class="headline">创业路的<span class="hl-accent">独特禀赋</span></h1>
-        <div class="rule"></div>
+        <h2 class="large-title mid-title">创业路的<span class="accent">独特禀赋</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
         <div class="tension">
           <div class="tension-side">
             <div class="tension-label">产业基因</div>
@@ -966,13 +526,15 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 07 Closing thesis ── -->
-  <div class="slide" data-index="6">
+<!-- 07 Closing thesis -->
+<section class="slide light" data-note="结题：存量如何成为未来。难点在正确理解当下与未来，把存量转化为真实需求，而非只做立面或一次性活化。">
+  <div class="slide-content">
     <div class="closing-center">
-      <div class="eyebrow">创业路·价值判断　07 / 07</div>
-      <h1 class="headline">命题：<span class="hl-accent">存量</span>如何成为<span class="hl-accent3">未来</span></h1>
-      <div class="rule"></div>
+      <p class="smallcap">07 / 价值判断 · THESIS</p>
+      <h2 class="large-title">命题：<span class="accent">存量</span>如何成为<span class="accent" style="color:var(--forest)">未来</span></h2>
+      <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
       <div class="closing-thesis">
         创业路拥有孕育创新的多元基因，<br>
         也拥有海山城美好生活的稀缺地理。<br><br>
@@ -987,44 +549,45 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-
-  <!-- ── 08 Bridge — 总体战略定位 ── -->
-  <div class="slide slide-bridge" data-index="7">
-    <div class="bridge-bg" style="background-image:url('assets/bridge-bg.jpg')"></div>
-    <div class="bridge-meta"><span>TEKUMA · company brief</span><span>MAY 2025</span></div>
+<!-- 08 Bridge -->
+<section class="slide dark bridge" data-note="桥接页：总体战略定位——AI创新生态第一路、山海城美好生活栖居地、深圳城市再生长样本。">
+  <div class="bridge-bg" style="background-image:url('assets/bridge-bg.jpg')"></div>
+  <div class="bridge-meta"><span>TEKUMA · company brief</span><span>MAY 2025</span></div>
+  <div class="slide-content" style="display:flex;align-items:center;justify-content:center;height:100%">
     <div class="bridge-content">
       <div class="bridge-kicker">总体战略定位</div>
-      <h1 class="bridge-title">AI 创新生态第一路　山海城美好生活栖居地　深圳城市再生长样本</h1>
+      <h2 class="bridge-title">AI 创新生态第一路　山海城美好生活栖居地　深圳城市再生长样本</h2>
       <div class="bridge-rule"></div>
       <div class="bridge-slogan">让产业创新与美好生活，一同生长</div>
     </div>
   </div>
+</section>
 
-  <!-- ── 09 Overview — 三区总览 ── -->
-  <div class="slide slide-overview" data-index="8">
+<!-- 09 Overview -->
+<section class="slide warm" data-note="三类创新生态总览：海心宝中、城心灵芝、山心尖岗山，对应三种美好生活。">
+  <div class="slide-content">
+    <p class="smallcap">09 / 三区结构 · OVERVIEW</p>
     <div class="ov-wrap">
-      <div>
-        <div class="eyebrow">创业路·三区结构　01 / 04</div>
-        <div class="ov-top">
-          <div class="ov-col">
-            <div class="ov-district">[宝安中心区]</div>
-            <div class="ov-en">BAY HEART · BAOZHONG</div>
-            <div class="ov-claim">具身智能港 × 海城大都会</div>
-            <div class="ov-claim-en">Embodied AI Harbor × Bay City Metropolis</div>
-          </div>
-          <div class="ov-col">
-            <div class="ov-district">[灵芝片区]</div>
-            <div class="ov-en">CITY HEART · LINGZHI</div>
-            <div class="ov-claim">超级个体孵化器 × 潮流市井道街巷</div>
-            <div class="ov-claim-en">Super-Individual Incubator × Trendy Lanes &amp; Alleys</div>
-          </div>
-          <div class="ov-col">
-            <div class="ov-district">[尖岗山片区]</div>
-            <div class="ov-en">MOUNTAIN HEART · JIANGANGSHAN</div>
-            <div class="ov-claim">智能终端创新园 × 湾区山城后花园</div>
-            <div class="ov-claim-en">Intelligent Terminal Innovation Park × GBA Talent Retreat</div>
-          </div>
+      <div class="ov-top">
+        <div>
+          <div class="ov-district">[宝安中心区]</div>
+          <div class="ov-en">BAY HEART · BAOZHONG</div>
+          <div class="ov-claim">具身智能港 × 海城大都会</div>
+          <div class="ov-claim-en">Embodied AI Harbor × Bay City Metropolis</div>
+        </div>
+        <div>
+          <div class="ov-district">[灵芝片区]</div>
+          <div class="ov-en">CITY HEART · LINGZHI</div>
+          <div class="ov-claim">超级个体孵化器 × 潮流市井道街巷</div>
+          <div class="ov-claim-en">Super-Individual Incubator × Trendy Lanes &amp; Alleys</div>
+        </div>
+        <div>
+          <div class="ov-district">[尖岗山片区]</div>
+          <div class="ov-en">MOUNTAIN HEART · JIANGANGSHAN</div>
+          <div class="ov-claim">智能终端创新园 × 湾区山城后花园</div>
+          <div class="ov-claim-en">Intelligent Terminal Innovation Park × GBA Talent Retreat</div>
         </div>
       </div>
       <div class="ov-map">
@@ -1036,146 +599,79 @@ html, body {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── 10 海心 · 宝安中心区 ── -->
-  <div class="slide slide-district" data-index="9">
-    <div class="district-eyebrow">创业路·三区结构　02 / 04</div>
-    <div class="district-layout">
-      <div class="map-pane">
-        <img src="assets/map-baozhong.jpg" alt="宝安中心区地图">
-      </div>
-      <aside class="side-panel">
-        <div class="side-inner">
-          <div class="num">1</div>
-          <div class="role">海心</div>
-          <div class="district">[宝安中心区]</div>
-          <div class="en">BAY HEART · BAOZHONG</div>
-          <div class="taglines">
-            <div>具身智能港</div>
-            <div>海城大都会</div>
-          </div>
-        </div>
-      </aside>
+<!-- 10 海心 -->
+<section class="slide light district" data-note="海心·宝安中心区：具身智能港 × 海城大都会。">
+  <div class="district-eyebrow">三区结构　02 / 04 · 海心</div>
+  <div class="district-layout">
+    <div class="map-pane">
+      <img src="assets/map-baozhong.jpg" alt="宝安中心区地图">
     </div>
-  </div>
-
-  <!-- ── 11 城心 · 灵芝片区 ── -->
-  <div class="slide slide-district" data-index="10">
-    <div class="district-eyebrow">创业路·三区结构　03 / 04</div>
-    <div class="district-layout">
-      <div class="map-pane">
-        <img src="assets/map-lingzhi.jpg" alt="灵芝片区地图">
-      </div>
-      <aside class="side-panel">
-        <div class="side-inner">
-          <div class="num">2</div>
-          <div class="role">城心</div>
-          <div class="district">[灵芝片区]</div>
-          <div class="en">CITY HEART · LINGZHI</div>
-          <div class="taglines">
-            <div>超级个体孵化器</div>
-            <div>潮流市井道街巷</div>
-          </div>
+    <aside class="side-panel">
+      <div class="side-inner">
+        <div class="num">1</div>
+        <div class="role">海心</div>
+        <div class="district-name">[宝安中心区]</div>
+        <div class="en">BAY HEART · BAOZHONG</div>
+        <div class="taglines">
+          <div>具身智能港</div>
+          <div>海城大都会</div>
         </div>
-      </aside>
-    </div>
-  </div>
-
-  <!-- ── 12 山心 · 尖岗山片区 ── -->
-  <div class="slide slide-district" data-index="11">
-    <div class="district-eyebrow">创业路·三区结构　04 / 04</div>
-    <div class="district-layout">
-      <div class="map-pane">
-        <img src="assets/map-jiangangshan.jpg" alt="尖岗山片区地图">
       </div>
-      <aside class="side-panel">
-        <div class="side-inner">
-          <div class="num">3</div>
-          <div class="role">山心</div>
-          <div class="district">[尖岗山片区]</div>
-          <div class="en">MOUNTAIN HEART · JIANGANGSHAN</div>
-          <div class="taglines">
-            <div>智能终端创新园</div>
-            <div>湾区山城后花园</div>
-          </div>
-        </div>
-      </aside>
-    </div>
+    </aside>
   </div>
+</section>
 
+<!-- 11 城心 -->
+<section class="slide light district" data-note="城心·灵芝片区：超级个体孵化器 × 潮流市井道街巷。">
+  <div class="district-eyebrow">三区结构　03 / 04 · 城心</div>
+  <div class="district-layout">
+    <div class="map-pane">
+      <img src="assets/map-lingzhi.jpg" alt="灵芝片区地图">
+    </div>
+    <aside class="side-panel">
+      <div class="side-inner">
+        <div class="num">2</div>
+        <div class="role">城心</div>
+        <div class="district-name">[灵芝片区]</div>
+        <div class="en">CITY HEART · LINGZHI</div>
+        <div class="taglines">
+          <div>超级个体孵化器</div>
+          <div>潮流市井道街巷</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
 
-</div><!-- /deck -->
+<!-- 12 山心 -->
+<section class="slide warm district" data-note="山心·尖岗山片区：智能终端创新园 × 湾区山城后花园。">
+  <div class="district-eyebrow">三区结构　04 / 04 · 山心</div>
+  <div class="district-layout">
+    <div class="map-pane">
+      <img src="assets/map-jiangangshan.jpg" alt="尖岗山片区地图">
+    </div>
+    <aside class="side-panel">
+      <div class="side-inner">
+        <div class="num">3</div>
+        <div class="role">山心</div>
+        <div class="district-name">[尖岗山片区]</div>
+        <div class="en">MOUNTAIN HEART · JIANGANGSHAN</div>
+        <div class="taglines">
+          <div>智能终端创新园</div>
+          <div>湾区山城后花园</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
 
-<nav class="nav">
-  <button class="nav-btn" id="btn-prev" disabled>← 上一页</button>
-  <div class="nav-dots" id="dots"></div>
-  <span class="slide-counter" id="counter">1 / 12</span>
-  <button class="nav-btn" id="btn-next">下一页 →</button>
-</nav>
-
+</main>
+<div class="bottom-controls"><div class="controls-left"><button class="ui-btn" id="prev" title="上一页 / ←">←</button><button class="ui-btn" id="next" title="下一页 / →">→</button><button class="ui-btn" id="notes" title="显示当前页讲述提示 / N">讲述提示 N</button><button class="ui-btn" id="full" title="全屏 / F">全屏 F</button></div><span class="ui-hint">← → 翻页 &nbsp; · &nbsp; N 讲述提示 &nbsp; · &nbsp; F 全屏</span></div>
+<div class="note-drawer" id="noteDrawer"><button class="close-note" id="closeNote" aria-label="关闭讲述提示">×</button><div class="head">SPEAKER NOTE / 讲述提示</div><p id="noteText"></p></div><div class="progress" id="progress"></div>
 <script>
-(function(){
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const dotsEl  = document.getElementById('dots');
-  const counter = document.getElementById('counter');
-  const btnPrev = document.getElementById('btn-prev');
-  const btnNext = document.getElementById('btn-next');
-  const prog    = document.getElementById('prog');
-  const n = slides.length;
-  let cur = 0;
-
-  slides.forEach(function(_, i){
-    const d = document.createElement('button');
-    d.className = 'dot' + (i===0?' active':'');
-    d.setAttribute('aria-label', '第'+(i+1)+'页');
-    d.addEventListener('click', function(){ goTo(i); });
-    dotsEl.appendChild(d);
-  });
-
-  function goTo(next) {
-    if (next === cur) return;
-    const prev = cur;
-    slides[prev].classList.add('exit');
-    slides[prev].classList.remove('active');
-    slides[next].classList.add('active');
-    slides[next].classList.remove('exit');
-    setTimeout(function(){ slides[prev].classList.remove('exit'); }, 400);
-    cur = next;
-    update();
-  }
-
-  function update(){
-    const dots = dotsEl.querySelectorAll('.dot');
-    dots.forEach(function(d,i){ d.classList.toggle('active', i===cur); });
-    counter.textContent = (cur+1) + ' / ' + n;
-    btnPrev.disabled = cur === 0;
-    btnNext.disabled = cur === n-1;
-    prog.style.width = ((cur+1)/n*100) + '%';
-    location.hash = String(cur+1);
-  }
-
-  btnPrev.addEventListener('click', function(){ if(cur>0) goTo(cur-1); });
-  btnNext.addEventListener('click', function(){ if(cur<n-1) goTo(cur+1); });
-
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ')  { e.preventDefault(); if(cur<n-1) goTo(cur+1); }
-    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    { if(cur>0)   goTo(cur-1); }
-  });
-
-  function applyHash(){
-    var h = parseInt((location.hash||'').replace('#',''), 10);
-    if (h >= 1 && h <= n) {
-      slides.forEach(function(s){ s.classList.remove('active','exit'); });
-      cur = h-1;
-      slides[cur].classList.add('active');
-      update();
-    } else {
-      update();
-    }
-  }
-  window.addEventListener('hashchange', applyHash);
-  applyHash();
-})();
+(()=>{const slides=[...document.querySelectorAll('.slide')],counter=document.getElementById('counter'),progress=document.getElementById('progress'),drawer=document.getElementById('noteDrawer'),noteText=document.getElementById('noteText');let current=0,lock=false;const pad=n=>String(n).padStart(2,'0');function update(i){current=Math.min(slides.length-1,Math.max(0,i));counter.textContent=`${pad(current+1)} / ${pad(slides.length)}`;progress.style.width=`${100*(current+1)/slides.length}%`;noteText.textContent=slides[current].dataset.note||''}function go(i){update(i);slides[current].scrollIntoView({behavior:'instant',block:'start'})}function notes(){drawer.classList.toggle('visible');noteText.textContent=slides[current].dataset.note||''}document.getElementById('prev').onclick=()=>go(current-1);document.getElementById('next').onclick=()=>go(current+1);document.getElementById('notes').onclick=notes;document.getElementById('closeNote').onclick=()=>drawer.classList.remove('visible');document.getElementById('full').onclick=()=>{if(!document.fullscreenElement){document.documentElement.requestFullscreen?.()}else{document.exitFullscreen?.()}};document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(current+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}else if(e.key==='Home'){e.preventDefault();go(0)}else if(e.key==='End'){e.preventDefault();go(slides.length-1)}else if(e.key.toLowerCase()==='n'){notes()}else if(e.key.toLowerCase()==='f'){document.getElementById('full').click()}else if(e.key==='Escape'){drawer.classList.remove('visible')}});let observer=new IntersectionObserver(entries=>{let best=entries.filter(x=>x.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(best)update(slides.indexOf(best.target))},{threshold:[.45,.6,.75]});slides.forEach(s=>observer.observe(s));update(0)})();
 </script>
 </body>
 </html>
