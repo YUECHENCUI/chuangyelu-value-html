@@ -195,6 +195,15 @@
 .district-jgs .map-pane img{object-fit:cover!important;object-position:center center!important}
 .district-jgs .map-pane{background:#111}
 
+
+.embodied-split{grid-template-columns:1.15fr 0.85fr;gap:clamp(24px,3vw,48px)}
+.embodied-map{max-height:min(78vh,820px)}
+.embodied-map img{max-height:min(72vh,760px);object-fit:contain;background:#f0eeea}
+.life-split{grid-template-columns:0.95fr 1.05fr}
+.life-collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.2fr 1fr;gap:8px;height:min(70vh,720px)}
+.life-collage img{width:100%;height:100%;object-fit:cover;border-radius:3px;display:block}
+.life-collage img:first-child{grid-row:1/-1}
+
 </style>
 </head>
 <body>
@@ -484,6 +493,58 @@
         </div>
       </div>
     </aside>
+  </div>
+</section>
+
+
+<!-- 10b 具身智能港 -->
+<section class="slide light" data-note="前海·宝安具身智能港：产业创新集聚区，超139家上下游企业。">
+  <div class="slide-content">
+    <p class="smallcap">宝安中心区 · 具身智能港</p>
+    <div class="split-layout embodied-split">
+      <div class="col-visual">
+        <figure class="hero-visual embodied-map">
+          <img src="assets/embodied-ai-port-map.jpg" alt="前海·宝安具身智能港区位与企业分布">
+        </figure>
+      </div>
+      <div class="col-text">
+        <h2 class="large-title mid-title"><span class="accent">具身智能港</span></h2>
+        <div class="sublead" style="margin-top:10px;font-weight:600;color:var(--ink)">具身智能产业创新集聚区</div>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead" style="max-width:520px">
+          2026年5月8日，“宝智链新”前海·宝安人工智能产业发展大会上正式发布“具身智能港”，定位是具有国际影响力的具身智能产业创新引领区。
+        </p>
+        <p class="sublead" style="max-width:520px;margin-top:18px">
+          港内已集聚超<strong>139</strong>家具身智能上下游企业，覆盖算力、感知大模型、核心零部件到整机。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10c 宝安中心区生活舞台 -->
+<section class="slide warm" data-note="宝安中心区应成为创新展示舞台与顶尖人才第一居所。">
+  <div class="slide-content">
+    <p class="smallcap">宝安中心区 · 生活与舞台</p>
+    <div class="split-layout life-split">
+      <div class="col-text">
+        <h2 class="large-title mid-title">开放舞台与<br><span class="accent">第一居所</span></h2>
+        <div class="thin-rule" style="width:42px;margin:22px 0;background:var(--orange)"></div>
+        <p class="sublead" style="max-width:560px">
+          成熟的商务、文体、商业与滨海公共空间基础，叠加具身智能等新兴产业发展动向。
+        </p>
+        <p class="sublead" style="max-width:560px;margin-top:18px">
+          宝安中心区应当成为创新成果展示与资源连接的<strong>开放舞台</strong>，与满足顶尖科创人才美好生活的<strong>第一居所</strong>。
+        </p>
+      </div>
+      <div class="col-visual">
+        <div class="life-collage">
+          <img src="assets/baozhong-life-a.jpg" alt="宝安中心区滨海与城市生活">
+          <img src="assets/baozhong-life-b.jpg" alt="滨海公共空间">
+          <img src="assets/baozhong-life-c.jpg" alt="城市界面">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
